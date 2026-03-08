@@ -681,6 +681,126 @@ ul { list-style: none; }
 }
 .L5 .warm-foot .f-brand em { font-style: italic; color: var(--warm); }
 .L5 .warm-foot .f-note { font-size: 12px; color: #998; }
+
+/* =========================================
+   6 - SWISS TYPOGRAPHIC (Green variant)
+   Based on L1, dark green accent, 8 nav + 8 cards
+   ========================================= */
+.L6 {
+  --ink: #0a0a0a; --paper: #f2f0ec; --accent: #1a5e3a; --rule: #c8c4bc;
+  font-family: 'Archivo', sans-serif;
+  background: var(--paper); color: var(--ink);
+}
+.L6 .topbar {
+  display: grid; grid-template-columns: 200px 1fr;
+  border-bottom: 2px solid var(--ink);
+}
+.L6 .topbar .mark {
+  padding: 18px 24px; font-weight: 900; font-size: 15px; letter-spacing: .15em;
+  text-transform: uppercase; border-right: 2px solid var(--ink);
+  display: flex; align-items: center;
+}
+.L6 .topbar .mark em { font-style: normal; color: var(--accent); }
+.L6 .topbar nav {
+  display: flex; align-items: center; gap: 0; padding: 0;
+}
+.L6 .topbar nav a {
+  padding: 18px 18px; font-size: 11.5px;
+  text-transform: uppercase; letter-spacing: .1em; font-weight: 600;
+  border-right: 1px solid var(--rule); transition: background .15s;
+}
+.L6 .topbar nav a:hover { background: var(--ink); color: var(--paper); }
+.L6 .hero {
+  display: grid; grid-template-columns: 200px 1fr 340px;
+  min-height: 520px; border-bottom: 2px solid var(--ink);
+}
+.L6 .hero .col-label {
+  border-right: 2px solid var(--ink); padding: 32px 24px;
+  writing-mode: vertical-lr; text-orientation: mixed;
+  font-size: 11px; text-transform: uppercase; letter-spacing: .2em;
+  font-weight: 700; color: var(--accent); display: flex; align-items: flex-start;
+}
+.L6 .hero .col-main {
+  padding: 48px 48px 40px;
+  display: flex; flex-direction: column; justify-content: space-between;
+  border-right: 1px solid var(--rule);
+}
+.L6 .hero .col-main h1 {
+  font-size: clamp(42px, 5vw, 72px); font-weight: 900; line-height: .95;
+  text-transform: uppercase; letter-spacing: -.02em; max-width: 650px;
+}
+.L6 .hero .col-main h1 span { color: var(--accent); }
+.L6 .hero .col-main .sub {
+  font-size: 15px; line-height: 1.7; max-width: 520px; margin-top: 32px; color: #444;
+}
+.L6 .hero .col-side { padding: 0; display: grid; grid-template-rows: repeat(4, 1fr); }
+.L6 .hero .col-side .stat-cell {
+  padding: 20px 28px; border-bottom: 1px solid var(--rule);
+  display: flex; flex-direction: column; justify-content: center;
+}
+.L6 .hero .col-side .stat-cell:last-child { border-bottom: 0; }
+.L6 .hero .col-side .stat-cell .num {
+  font-size: 38px; font-weight: 900; letter-spacing: -.03em; line-height: 1;
+}
+.L6 .hero .col-side .stat-cell .lbl {
+  font-size: 10px; text-transform: uppercase; letter-spacing: .15em;
+  margin-top: 6px; color: #777; font-weight: 600;
+}
+.L6 .overview {
+  display: grid; grid-template-columns: 200px 1fr;
+  border-bottom: 2px solid var(--ink);
+}
+.L6 .overview .sec-label {
+  border-right: 2px solid var(--ink); padding: 40px 24px;
+  font-size: 11px; text-transform: uppercase; letter-spacing: .15em; font-weight: 700;
+}
+.L6 .overview .sec-body {
+  padding: 40px 48px; columns: 2; column-gap: 48px;
+  font-size: 15px; line-height: 1.85; color: #333;
+}
+.L6 .overview .sec-body p { margin-bottom: 16px; break-inside: avoid; }
+.L6 .explore {
+  display: grid; grid-template-columns: 200px 1fr;
+  border-bottom: 2px solid var(--ink);
+}
+.L6 .explore .sec-label {
+  border-right: 2px solid var(--ink); padding: 40px 24px;
+  font-size: 11px; text-transform: uppercase; letter-spacing: .15em; font-weight: 700;
+}
+.L6 .explore .grid {
+  display: grid; grid-template-columns: repeat(4, 1fr);
+}
+.L6 .explore .grid .cell {
+  padding: 28px 24px; border-right: 1px solid var(--rule);
+  border-bottom: 1px solid var(--rule); transition: background .15s;
+}
+.L6 .explore .grid .cell:nth-child(4n) { border-right: 0; }
+.L6 .explore .grid .cell:nth-child(n+5) { border-bottom: 0; }
+.L6 .explore .grid .cell:hover { background: var(--ink); color: var(--paper); }
+.L6 .explore .grid .cell:hover .cell-lbl { color: var(--paper); opacity: .4; }
+.L6 .explore .grid .cell .cell-num {
+  font-size: 42px; font-weight: 900; color: var(--accent); line-height: 1;
+  margin-bottom: 10px; letter-spacing: -.03em;
+}
+.L6 .explore .grid .cell:hover .cell-num { color: var(--accent); }
+.L6 .explore .grid .cell h3 {
+  font-size: 15px; font-weight: 800; text-transform: uppercase;
+  letter-spacing: .04em; margin-bottom: 6px;
+}
+.L6 .explore .grid .cell .cell-lbl {
+  font-size: 12px; color: #888; line-height: 1.6; transition: color .15s;
+}
+.L6 footer {
+  display: grid; grid-template-columns: 200px 1fr;
+}
+.L6 footer .f-mark {
+  border-right: 2px solid var(--ink); padding: 28px 24px;
+  font-weight: 900; font-size: 13px; letter-spacing: .1em;
+}
+.L6 footer .f-body {
+  padding: 28px 48px; font-size: 12px; color: #888;
+  display: flex; justify-content: space-between; align-items: center;
+}
 </style>
 </head>
 <body>
@@ -693,13 +813,14 @@ ul { list-style: none; }
     <button onclick="go(3)">3 Broadsheet</button>
     <button onclick="go(4)">4 Split Institute</button>
     <button onclick="go(5)">5 Warm Institutional</button>
+    <button onclick="go(6)">6 Swiss Green</button>
   </div>
 </div>
 
 <!-- 1 SWISS TYPOGRAPHIC -->
 <div class="layout L1 active" id="L1">
   <div class="topbar">
-    <div class="mark">PP<em>BS</em></div>
+    <div class="mark">P<em>PB</em>S</div>
     <nav>
       <a href="#">Motivation</a><a href="#">Constructs</a><a href="#">Methodology</a>
       <a href="#">Reports</a><a href="#">Publications</a><a href="#">Investigators</a><a href="#">Contact</a>
@@ -937,6 +1058,56 @@ ul { list-style: none; }
     <div class="f-brand">PP<em>BS</em></div>
     <div class="f-note">Psychology of Political Behavior Studies &middot; PI: Flavio Azevedo</div>
   </div>
+</div>
+
+<!-- 6 SWISS GREEN -->
+<div class="layout L6" id="L6">
+  <div class="topbar">
+    <div class="mark">P<em>PB</em>S</div>
+    <nav>
+      <a href="#">Motivation</a><a href="#">Constructs</a><a href="#">Methodology</a>
+      <a href="#">Reports</a><a href="#">Publications</a><a href="#">Investigators</a><a href="#">Blog</a><a href="#">Get Involved</a>
+    </nav>
+  </div>
+  <div class="hero">
+    <div class="col-label">Established 2016</div>
+    <div class="col-main" data-anim="1">
+      <div>
+        <h1>Psychology of <span>Political Behavior</span> Studies</h1>
+        <p class="sub">Informing the psychological explanations of political behavior through large-scale, multi-wave, nationally representative survey research across three US election cycles.</p>
+      </div>
+    </div>
+    <div class="col-side">
+      <div class="stat-cell" data-anim="2"><div class="num">21,107</div><div class="lbl">Total interviews</div></div>
+      <div class="stat-cell" data-anim="3"><div class="num">60+</div><div class="lbl">Constructs measured</div></div>
+      <div class="stat-cell" data-anim="4"><div class="num">12</div><div class="lbl">Survey datasets</div></div>
+      <div class="stat-cell" data-anim="5"><div class="num">3</div><div class="lbl">Election cycles</div></div>
+    </div>
+  </div>
+  <div class="overview">
+    <div class="sec-label">Overview</div>
+    <div class="sec-body" data-anim="2">
+      <p>The Psychology of Political Behavior Studies (PPBS) are an ongoing series of quota-based national cross-sections containing a set of repeating core questions on social and political attitudes, values, voting and candidate preferences, and political participation.</p>
+      <p>PPBS leverages 12 datasets, collected through professional survey companies, for a combined N of 21,107 interviews. It includes four nationally representative cross-sections of the American population (N=7,259) during the last three elections in the US, their replication/confirmatory analogues (N=11,582), and repeated measures recontacts (N=2,215) across multiple time-points, allowing for both within and between research designs.</p>
+    </div>
+  </div>
+  <div class="explore">
+    <div class="sec-label">Explore</div>
+    <div class="grid">
+      <div class="cell" data-anim="2"><div class="cell-num">01</div><h3>Reports</h3><div class="cell-lbl">Reproducible analyses for RWA, SDO, System Justification, Empathy, Prejudice, and more</div></div>
+      <div class="cell" data-anim="3"><div class="cell-num">02</div><h3>Publications</h3><div class="cell-lbl">Peer-reviewed work on system justification, conspiratorial thinking, and populism</div></div>
+      <div class="cell" data-anim="4"><div class="cell-num">03</div><h3>Methodology</h3><div class="cell-lbl">Complete documentation for all survey waves 2016&ndash;2020 including recontact designs</div></div>
+      <div class="cell" data-anim="2"><div class="cell-num">04</div><h3>Constructs</h3><div class="cell-lbl">60+ political-psychological constructs measured with full validated instruments</div></div>
+      <div class="cell" data-anim="3"><div class="cell-num">05</div><h3>Investigators</h3><div class="cell-lbl">International team from Amsterdam, Cologne, Washington, and other leading institutions</div></div>
+      <div class="cell" data-anim="4"><div class="cell-num">06</div><h3>Motivation</h3><div class="cell-lbl">Theory construction, reproducibility, effect-size benchmarking, cumulative science</div></div>
+      <div class="cell" data-anim="3"><div class="cell-num">07</div><h3>Blog</h3><div class="cell-lbl">Updates, reflections, and commentary on the psychology of political behavior</div></div>
+      <div class="cell" data-anim="4"><div class="cell-num">08</div><h3>Get Involved</h3><div class="cell-lbl">Collaborate, access data, or join as a contributor to the PPBS research program</div></div>
+    </div>
+  </div>
+  <footer>
+    <div class="f-mark">P<em>PB</em>S</div>
+    <div class="f-body"><span>Psychology of Political Behavior Studies</span><span>PI: Flavio Azevedo</span></div>
+  </footer>
 </div>
 
 <script>
