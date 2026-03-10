@@ -1,0 +1,694 @@
+body{
+  text-align: justify;
+}
+
+/* Person block with a floated headshot */
+.person {
+  margin: 2rem 0;
+  line-height: 1.7;
+}
+
+/* float the headshot so text wraps */
+.headshot {
+  float: left;
+  border-radius: 50%;
+  width: 130px;  
+  margin: 0 .9rem .4rem 0; 
+}
+
+/* icons under the photo */
+.person .icons a {
+  margin-right: .5rem;
+  text-decoration: none;
+}
+
+/* clear the float at the end of each person block */
+.person::after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* right-floated headshot (mirror of .headshot) */
+.headshot-right {
+  float: right;
+  border-radius: 50%;
+  width: 130px;               /* match Jasmin */
+  margin: 0 0 .4rem .9rem;    /* space to the left/below the image */
+}
+
+/* optional: right-align icons under a right-floated image */
+.icons-right { text-align: right; }
+
+.column-left-people a,
+.column-right-people a,
+.icons a,
+a .fa,
+a .fab,
+a .fas,
+a .far,
+a .ai {
+  border-bottom: none !important;
+  text-decoration: none !important;
+  background: none !important;
+  box-shadow: none !important;
+}
+
+/* keep the same mobile behavior: stack on narrow screens */
+@media (max-width: 576px) {
+  .headshot-right {
+    float: none;
+    display: block;
+    margin: 0 auto .6rem auto;   /* center on mobile */
+  }
+}
+
+/* stack nicely on narrow screens */
+@media (max-width: 576px) {
+  .headshot {
+    float: none;
+    display: block;
+    margin: 0 auto .6rem auto;   /* center the image */
+  }
+}
+
+
+/* This change the style of the main container that wraps the whole R Markdown document. It allows the parallax image to be full width */
+.main-container {
+    max-width: 100% !important;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Then we place our content with this style because we don't want it to be full width */
+.mycontent, .mycontentold{
+      max-width: 910px !important;
+      margin-left: auto;
+      margin-right: auto;
+      font-size: 110%;
+      line-height: 1.7;
+      padding-right: 12px;
+      padding-left: 12px;
+}
+
+/* author and date should be different lines*/
+.quarto-title-meta {
+  display: block;
+}
+.quarto-title-meta-author,
+.quarto-title-meta-date {
+  display: block !important;
+}
+
+
+
+
+
+.dataTables_wrapper {
+  max-width: 900px !important;
+  margin: auto;
+}
+
+/* This fixes DT table overflow by allowing word wrapping */
+table.dataTable {
+  table-layout: fixed !important;
+  width: 100% !important;
+}
+
+/* This makes long words and URLs wrap in their cells */
+table.dataTable td {
+  word-break: break-word;
+  white-space: normal !important;
+}
+
+/* Optionally, set a min-width for the columns, so they don't get too small */
+table.dataTable th,
+table.dataTable td {
+  min-width: 75px;
+}
+
+/* Just for fun, a bit of customization for title and text.. */
+.mytitle{
+  text-transform: uppercase;
+  font-size: 80%;
+  font-weight: 250;
+  letter-spacing: 4px;
+}
+
+.mysubtitle{
+  color: #777;
+}
+
+h1 {
+    padding-top: 65px !important;
+    margin-top: 30px !important;
+}
+
+h2.title {
+  border-bottom: none !important;
+  box-shadow: none !important;
+}
+
+/*hr {display: none !important;}*/
+
+pre {
+    border: 0px solid #cccccc;
+    border-radius: 0px;
+ }
+
+main a {
+  color: #1a5e3a;
+}
+
+a:hover {
+  color: #0d3d22;
+}
+
+a,
+a:visited,
+a:hover, 
+a:active {
+  text-decoration: none;
+}
+
+/* flat icons and text */
+
+.column-left{
+  float: left;
+  width: 33%;
+  text-align: center;
+}
+.column-center{
+  display: inline-block;
+  width: 33%;
+  text-align: center;
+}
+.column-right{
+  float: right;
+  width: 33%;
+  text-align: center;
+}
+
+.column-left-people{
+  float: left;
+  width: 30%;
+  text-align: center;
+  padding-right: 20px;
+  padding-left: 1px;
+}
+.column-right-people{
+  float: right;
+  width: 30%;
+  text-align: center;
+  padding-right: 1px;
+  padding-left: 20px;
+}
+
+a:hover {
+  color: #1a5e3a;
+}
+
+.right {
+  transform: rotate(-45deg);
+  -webkit-transform: rotate(-45deg);
+}
+
+.left {
+  transform: rotate(135deg);
+  -webkit-transform: rotate(135deg);
+}
+
+.up {
+  transform: rotate(-135deg);
+  -webkit-transform: rotate(-135deg);
+}
+
+.down {
+  transform: rotate(45deg);
+  -webkit-transform: rotate(45deg);
+}
+
+/* Here is a CSS code for 2 and 3 columns WITHOUT definition of what goes where*/
+
+.col2 {
+    columns: 2 200px;         /* number of columns and width in pixels*/
+    -webkit-columns: 2 200px; /* chrome, safari */
+    -moz-columns: 2 200px;    /* firefox */
+  }
+.col3 {
+    columns: 3 100px;
+    -webkit-columns: 3 100px;
+    -moz-columns: 3 100px;
+  }
+
+/* not sure where these classes are used
+
+pre.bluecars {
+    background-color: #aabbff !important;
+}
+pre.redcars {
+    background-color: #ff6bbc !important;
+}
+*/
+
+.person + .person { margin-top: 2.5rem; }   /* space between entries */
+.person .icons a { margin-right: .5rem; text-decoration: none; }
+
+/* Override Bootstrap's dark theme on navbar */
+.navbar[data-bs-theme="dark"] {
+  background-color: #111111 !important;
+  --bs-navbar-color: #fffff0 !important;
+  --bs-navbar-hover-color: #1a5e3a !important;
+  --bs-navbar-active-color: #fffff0 !important;
+  --bs-navbar-brand-color: #fffff0 !important;
+}
+
+/* turns navbar title logo green nearly #9cc63b on hover */
+#navbar-logo:hover {
+  filter: brightness(0) saturate(100%) sepia(71%) saturate(384%) hue-rotate(35deg) brightness(92%) contrast(93%);
+  transition: filter 0.15s;
+}
+
+/* ----------------------------------------------*/
+/* Investigators page                         */ 
+/* ----------------------------------------------*/
+
+.person-row {
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  gap: 36px;
+  margin: 48px 0;
+  flex-wrap: wrap;
+}
+
+.person-row.reverse {
+  flex-direction: row-reverse;
+}
+
+.person-img {
+  min-width: 130px;
+  text-align: center;
+  margin-bottom: 0;
+}
+
+.person-img img {
+  width: 130px;
+  height: 130px;
+  object-fit: cover;
+  border-radius: 50%;
+  display: block;
+  margin: 0 auto;
+}
+
+.person-img p {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0.3em;
+  margin: 0.5em 0 0 0;
+  max-width: 130px;
+}
+
+.person-bio {
+  max-width: 600px;
+  font-size: 1.09rem;
+  text-align: justify;
+  margin: 0 10px;
+}
+
+@media (max-width: 800px) {
+  .person-row, .person-row.reverse {
+    flex-direction: column !important;
+    align-items: center;
+    text-align: center;
+  }
+  .person-bio {
+    text-align: center;
+  }
+}
+
+/* Remove underline/border for links containing only an icon */
+.person-row a,
+.person-row a:visited,
+.person-row a:active {
+  border-bottom: none !important;
+  text-decoration: none !important;
+  background: none !important;
+}
+
+/* Also remove effects from the icon element itself */
+.person-row a i,
+.person-row a .fa,
+.person-row a .fab,
+.person-row a .far,
+.person-row a .fas,
+.person-row a .ai {
+  border: none !important;
+  border-bottom: none !important;
+  text-decoration: none !important;
+  background: none !important;
+  box-shadow: none !important;
+}
+
+.icon-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0.3em;            /* or your preferred spacing */
+  margin: 0.5em 0 0 0;
+  max-width: 100px;      /* play with this to achieve 2 lines */
+}
+
+
+/* CONSTRUCTS PAGE*/
+
+.construct-block {
+                              /*background: #fbfbfd;*/
+  border: none;               /*1px solid #ddd*/
+  border-radius: 9px;
+  padding: 8px 24px 12px 24px;
+  margin-bottom: 32px;
+  box-shadow: none;            /*1px 1px 8px rgba(0,0,0,0.025)*/
+}
+.construct-block h1,
+.construct-block h2,
+.construct-block h3,
+.construct-block h4 {
+  margin-top: 0.5em !important;
+  margin-bottom: 0.25em !important;
+}
+
+.subconstruct-card {
+  /*background: #f6f8fa;*/
+  /* border: 1px solid #9cc63b !important; border-radius: 15px;*/
+  border: none; 
+  padding: 13px 18px 0px 18px;
+  margin-bottom: 11px;
+  margin-left: 0.6em;
+  /*box-shadow: 1px 1px 4px #25a6bc;*/
+}
+
+/* Construct Pills */ 
+
+#construct-glance-pills {
+  margin-bottom: 1.5em;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;  /* This centers the pills horizontally */
+  gap: 0 8px;               /* Optional: horizontal gap between pills */
+}
+
+.construct-pill {
+  display: inline-block;
+  border-radius: 15px;
+  padding: 6px 18px;
+  margin: 0 6px 10px 0;
+  font-size: 1.1em;
+  font-weight: 500;
+  cursor: pointer;
+  color: #282828;
+  text-decoration: none !important;
+  background: #a8d5b8; /* light tint of accent */
+  border: none;
+  transition: box-shadow 0.16s, transform 0.14s, background 0.16s, color 0.16s;
+}
+.construct-pill:hover {
+  background: #1a5e3a;
+  color: #282828;
+  box-shadow: 0 2px 8px rgba(26, 94, 58, 0.25);
+  transform: translateY(-2px) scale(1.04);
+  opacity: 0.92;
+}
+
+.construct-pill.active {
+  background: none; /* lighter green */
+  outline: 2px solid #1a5e3a;
+  text-decoration: bold;
+}
+
+
+
+/* INVESTIGATORS page */
+.person-img img {
+  transition: transform 0.18s cubic-bezier(.25,.8,.25,1), box-shadow 0.18s;
+  will-change: transform, box-shadow;
+}
+
+.person-img img:hover,
+.person-row:focus-within .person-img img {
+  transform: scale(1.025); /* just 1.5% larger */
+  box-shadow: 0 4px 14px rgba(0,0,0,0.08);
+  z-index: 2;
+}
+
+.fa,
+.fab,
+.fas,
+.far,
+.ai {
+  font-size: 1.25em; 
+  vertical-align: middle;
+  color: #0072b1;
+  transition: transform 0.18s cubic-bezier(.25,.8,.25,1), box-shadow 0.18s;
+  will-change: transform, box-shadow;
+}
+
+.fa:hover,
+.fab:hover,
+.fas:hover,
+.far:hover,
+.ai:hover {
+  transform: scale(1.1); 
+  box-shadow: 0 4px 14px rgba(0,0,0,0.08);
+  z-index: 2;
+}
+
+
+/* HANGING INDENT */
+
+.hangingindent {
+  padding-left: 2em;    /* Indent for all lines */
+  text-indent: -2em;    /* Negative indent for the first line */
+}
+
+/* Remove border/lines under Quarto section headings */
+.quarto-title-block .quarto-title,
+h1, h2, h3, h4, h5, h6 {
+  border-bottom: none !important;
+  box-shadow: none !important;
+}
+
+
+
+/* navbar dropdown menu */
+.dropdown-menu .dropdown-item {
+  font-size: 1em; 
+  padding: 0.55em 1.25em;
+  line-height: 1.3;
+  font-family: 'Archivo', sans-serif;
+  transition: background 0.13s, color 0.13s;
+}
+
+.menu-text {
+  font-size: 1em;
+}
+
+.dropdown-menu .dropdown-item:hover,
+.dropdown-menu .dropdown-item:focus {
+  background: #a8d5b8;
+  color: #282828;
+}
+
+/* headings not justify */ 
+
+h1, h2, h3, h4, h5, h6,
+.quarto-title, .quarto-title-block, .title, .mysubtitle, .mytitle {
+  text-align: left !important;
+}
+
+.mycontent h1, .mycontent h2, .mycontent h3, .mycontent h4, .mycontent h5, .mycontent h6 {
+  text-align: left !important;
+}
+
+
+/* Reproducible Reports */
+.accordion{
+  max-width: 800px;
+  margin: 120px auto 80px;
+  padding: 0 20px;
+}
+
+.accordion__title{
+  margin: 0 0 24px;
+  font-size: clamp(24px, 3vw, 32px);
+  font-weight: 700;
+  letter-spacing: .2px;
+}
+
+.accordion__list{
+  display: grid;
+  gap: 16px;
+}
+
+.accordion__item{
+  background: var(--card);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  padding: 18px 22px;
+  position: relative;
+}
+
+.accordion__checkbox{
+  display: none;
+}
+
+.accordion__question{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  cursor: pointer;
+  margin: 0;
+  font-size: 20px;
+  font-weight: 600;
+}
+
+.accordion__question:focus,
+.accordion__question:focus-visible{
+  outline: 2px solid var(--accent);
+  outline-offset: 4px;
+  border-radius: 8px;
+}
+
+.accordion__indicator{
+  flex: 0 0 32px;
+  height: 32px;
+  border: 2px solid var(--accent);
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
+  position: relative;
+}
+
+.accordion__indicator::before,
+.accordion__indicator::after{
+  content: "";
+  position: absolute;
+  width: 12px;
+  height: 2px;
+  background: var(--accent);
+  transition: transform .3s ease;
+}
+
+.accordion__indicator::after{
+  transform: rotate(90deg); 
+}
+
+.accordion__answer{
+  margin: 0;
+  color: var(--accent);
+  font-size: 16px;
+  max-height: 0;
+  overflow: hidden;
+  opacity: 0;
+  transition: max-height .4s ease, opacity .3s ease, padding .3s ease;
+  will-change: max-height, opacity;
+}
+
+.accordion__checkbox:checked ~ .accordion__answer{
+  padding-top: 10px;
+  opacity: 1;
+  max-height: 1000px;
+}
+
+.accordion__checkbox:checked ~ .accordion__question .accordion__indicator::after{
+  transform: rotate(0deg); 
+}
+
+@media (prefers-reduced-motion: reduce){
+  .accordion__answer,
+  .accordion__indicator::after{
+    transition: none;
+  }
+}
+
+/* PARAMETERIZED REPORTS*/
+
+/* Make sure paragraphs, headings, and tables inherit */
+
+h1, h2, h3, h4, h5, h6,
+caption,
+.table, th, td,
+.figcaption,
+code,
+button,
+input,
+label,
+legend,
+p, li,
+.text, .caption, .table-caption, .figure-caption, .quarto-title-block,
+.quarto-section-title, .toc, .quarto-figure,
+pre {
+  font-family: inherit !important;
+}
+
+.sidebar-toc {
+  max-height: calc(100vh - 70px); /* Adjust based on your footer height */
+  overflow-y: auto;              /* Enable scrolling if too long */
+  z-index: 10;                   /* Make sure it's behind the footer */
+}
+
+table, table * {
+  font-family: 'Archivo', sans-serif !important;
+}
+
+figcaption[id^="tbl-"] {
+  text-align: left !important;
+  size: 14px;
+}
+
+/* Custom figure captions for tabset figures (Figure X.Y numbering) */
+.figcap-custom {
+  font-style: italic;
+  color: #555;
+  margin-bottom: 0.3em;
+  font-size: 0.95em;
+}
+
+figure img {
+  margin-top: 1em;
+}
+
+.glightbox-clean .gslide-description {
+    top: 0 !important;
+    bottom: auto !important;
+    padding-top: 1em;
+    padding-bottom: 0;
+}
+.glightbox-clean .gslide-image {
+    margin-top: 3em; /* add space below caption */
+}
+
+.lightbox .pswp__caption {
+  top: 0 !important;
+  bottom: unset !important;
+  background: rgba(0, 0, 0, 0.6);
+  padding-bottom: 0.5em;
+  padding-top: 0.5em;
+}
+
+/* make toc align left */
+
+/* Left-align text in the sidebar TOC */
+.sidebar-title,
+.sidebar-navigation,
+.sidebar,
+.toc-content,
+.quarto-sidebar,
+.quarto-sidebar-toc,
+.toc,
+.toc-sidebar,
+.toc-entry {
+  text-align: left !important;
+}

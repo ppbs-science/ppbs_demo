@@ -1,0 +1,218 @@
+<style>
+
+  @import url('https://fonts.googleapis.com/css2?family=Domine:wght@400..700&display=swap');
+
+  /* Regular (Normal) */
+  @font-face {
+    font-family: 'Century Schoolbook';
+    src: url('Century_Schoolbook_Std_Regular.otf') format('opentype');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+  }
+
+  /* Bold */
+  @font-face {
+    font-family: 'Century Schoolbook';
+    src: url('Century_Schoolbook_Bold.ttf') format('truetype');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+  }
+
+  /* Footer Container - Full Width */
+  .footer-container {
+    background-color:  #282828;
+    margin-top: 120px;
+    padding: 80px 0 40px 0;
+    width: 100vw !important;
+    position:  relative;
+    left: 50%;
+    right: 50%;
+    margin-left: -50vw;
+    margin-right: -50vw;
+    font-family: 'Century Schoolbook', 'Domine', serif;
+  }
+
+  /* Footer Styling */
+  .footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    max-width:  1000px;
+    margin: 0 auto;
+    padding: 22px 40px 40px 40px;
+    color: #fffff0;
+  }
+
+  .footer-left {
+    flex: 0 0 33%; 
+    max-width: 250px;
+    padding-right:  40px;
+    display: flex;   
+    flex-direction: column; 
+    justify-content: flex-start;
+    text-align: left; 
+  }
+
+
+  .footer-left .logo {
+    font-size:  24px;
+    font-weight: bold;
+    line-height: 1.2;
+    margin-bottom: 16px;
+    color: #fffff0;
+  }
+
+  .footer-left p {
+    margin: 0 0 24px 0;
+    line-height: 1.6;
+    opacity: 0.8;
+    font-size:  14px;
+  }
+
+  .footer-right {
+    display: flex;
+    gap:  80px;
+    flex: 0 0 67%;       
+    justify-content: flex-end;
+  }
+
+  .footer-section {
+    min-width: 140px;
+  }
+
+  .footer-section h4 {
+    margin-bottom: 16px;
+    font-size: 14px;
+    font-weight:  600;
+    letter-spacing: 0.5px;
+    color: #fffff0;
+    text-transform: uppercase;
+  }
+
+  .footer-section h4:not(:first-child) {
+    margin-top: 30px;
+  }
+
+  .footer-section ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+  }
+
+  .footer-section ul li {
+    margin-bottom:  12px;
+    list-style: none;
+  }
+
+  .footer-section ul li a {
+    text-decoration: none;
+    color: #fffff0;
+    opacity: 0.7;
+    transition: opacity 0.2s ease;
+    font-size: 14px;
+  }
+
+  .footer-section ul li a:hover {
+  color:#8CB234;  /* #9cc63b; */
+  }
+
+  .footer-section ul li a:hover {
+    opacity: 1;
+  }
+
+  /* Footer Bottom - Logo */
+  .footer-bottom {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 20px 40px 20px 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .footer-logo-img {
+    max-width: 120px;
+    width: 80%;
+    height: auto;
+    opacity:  0.5;
+  }
+
+  /* Responsive Design */
+  @media (max-width:  768px) {
+    .footer {
+      flex-direction:  column;
+      gap: 40px;
+      padding: 0 20px 40px 20px;
+    }
+    
+    .footer-left {
+      padding-right: 0;
+      max-width: 100%;
+      display: block;  /* return to normal block on mobile for better stacking */
+    }
+
+    .footer-right {
+      flex-direction:  column;
+      gap: 30px;
+      padding-top: 16px; 
+    }
+
+    .footer-container {
+      padding: 60px 0 20px 0;
+      margin-top: 80px;
+    }
+
+  }
+
+  .footer-left .logo,
+.footer-section h4 {
+  margin-top: 0;
+  font-family: 'Century Schoolbook', 'Domine', serif;
+  font-weight: 600;
+}
+</style>
+
+<!-- Footer Design -->
+<div class="footer-container">
+<footer class="footer">
+  <!-- Left Column: Brand & Description -->
+  <div class="footer-left">
+    <div class="logo">The Psychology of Political Behavior Studies (PPBS)</div>
+    <p>Informing the psychological explanations of political behavior</p>
+  </div>
+  
+  <!-- Right Columns: Navigation -->
+  <div class="footer-right">
+    <!-- About PPBS Column -->
+    <div class="footer-section">
+      <h4>About PPBS</h4>
+      <ul>
+        <li><a href="https://ppbs.science/motivation.html">Motivation</a></li>
+        <li><a href="https://ppbs.science/constructs.html">Constructs</a></li>
+        <li><a href="https://ppbs.science/reports.html">Reproducible Reports</a></li>
+        <li><a href="https://ppbs.science/join.html">Join Us</a></li>
+      </ul>
+    </div>
+    
+    <!-- Combined About Us & Contact Us Column -->
+    <div class="footer-section">
+      <h4>About Us</h4>
+      <ul>
+        <li><a href="https://ppbs.science/investigators.html">Investigators</a></li>
+      </ul>
+      
+      <h4>Contact Us</h4>
+      <ul>
+        <li><a href="https://ppbs.science/contact.html">Get in Touch</a></li>
+      </ul>
+    </div>
+  </div>
+</footer>
+
+<!-- Footer Bottom:  Logo -->
+<div class="footer-bottom">
+  <img src="assets/img/PPBS_fav_gray.png" alt="PPBS Head Logo" class="footer-logo-img">
+</div>
+</div>

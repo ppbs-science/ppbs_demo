@@ -1,0 +1,84 @@
+/* ===========================
+   PPBS Quarto Theme — L6 Swiss Green
+   =========================== */
+
+/*-- scss:defaults --*/
+
+/* Google Font import */
+@import url('https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600;700;800;900&display=swap');
+
+/* Brand palette — L6 Swiss Green */
+$ppbs-paper:  #f2f0ec;   // warm off-white background
+$ppbs-ink:    #0a0a0a;   // near-black body text
+$ppbs-accent: #1a5e3a;   // deep forest green accent
+$ppbs-rule:   #c8c4bc;   // warm gray for borders/rules
+$ppbs-muted:  #777777;   // muted text
+
+/* Typography */
+$font-family-sans-serif: 'Archivo', sans-serif;
+$font-size-base: 1rem;
+$headings-font-weight: 700;
+
+/* Bootstrap color system */
+$primary:   $ppbs-accent;
+$secondary: $ppbs-ink;
+$body-bg:   #ffffff;
+$body-color: $ppbs-ink;
+
+/* Links */
+$link-color:        $ppbs-accent;
+$link-decoration:   none;
+$link-hover-color:  darken($ppbs-accent, 10%);
+
+/* Headings */
+$headings-color: $ppbs-ink;
+
+/* Tables / code blocks */
+$table-striped-bg: rgba(0,0,0,.03);
+$code-block-bg:    darken($ppbs-paper, 2%);
+
+/* Borders */
+$border-color: $ppbs-rule;
+
+/* Buttons */
+$btn-border-radius: .2rem;
+
+/*-- scss:rules --*/
+
+/* Consistent white background for report content */
+body,
+main,
+#quarto-content,
+#quarto-content .page-columns,
+.content,
+.sidebar,
+.title-block,
+.quarto-title-block {
+  background: #ffffff !important;
+  background-image: none !important;
+}
+
+/* Title block */
+.quarto-title h1 {
+  font-weight: 900;
+  letter-spacing: -.02em;
+  text-transform: uppercase;
+}
+.quarto-title .subtitle {
+  color: $ppbs-muted;
+  font-weight: 400;
+}
+
+/* Section headings */
+h1, h2, h3, h4, h5, h6 {
+  letter-spacing: .01em;
+}
+
+/* TOC accent */
+.sidebar nav[role="doc-toc"] a.active {
+  color: $ppbs-accent;
+  border-left-color: $ppbs-accent;
+}
+
+/* Accent utility class */
+.hl-accent { background: rgba($ppbs-accent, .2); padding: .1rem .25rem; }

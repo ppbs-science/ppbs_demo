@@ -1,0 +1,33 @@
+<!-- L6 Website Footer -->
+<div class="l6-footer">
+  <div class="l6-f-mark">P<em>PB</em>S</div>
+  <div class="l6-f-body">
+    <span>Psychology of Political Behavior Studies</span>
+    <span>PI: Flavio Azevedo</span>
+  </div>
+</div>
+<script>
+// Move topbar and footer outside Quarto's grid layout so they span full width
+// without overlapping the TOC sidebar
+(function() {
+  var topbar = document.querySelector('.l6-topbar');
+  var footer = document.querySelector('.l6-footer');
+  var quartoContent = document.getElementById('quarto-content');
+
+  if (topbar && quartoContent) {
+    quartoContent.parentNode.insertBefore(topbar, quartoContent);
+  }
+  if (footer && quartoContent) {
+    quartoContent.parentNode.insertBefore(footer, quartoContent.nextSibling);
+  }
+
+  // Mobile nav toggle
+  var toggle = document.querySelector('.l6-nav-toggle');
+  if (toggle) {
+    toggle.addEventListener('click', function() {
+      var nav = document.querySelector('.l6-topbar nav');
+      if (nav) nav.classList.toggle('l6-open');
+    });
+  }
+})();
+</script>
