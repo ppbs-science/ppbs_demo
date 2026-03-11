@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Constructs — PPBS</title>
+  <link rel="stylesheet" href="css/l6.css">
+</head>
+<body data-page="constructs">
+
+{{topbar}}
+
+<div class="page-header">
+  <div class="sec-label">Data</div>
+  <div class="header-body">
+    <h1><span>Measured</span> Constructs</h1>
+    <p class="subtitle">Over 60 political-psychological constructs measured with full validated instruments across multiple survey waves.</p>
+  </div>
+</div>
+
+<div class="page-content">
+  <div class="sec-label">Browse</div>
+  <div class="content-body" style="max-width: 100%;">
+    {{content}}
+    <div class="pill-filter" id="construct-filters"></div>
+    <div style="overflow-x: auto;">
+      <table class="constructs-table" id="constructs-table">
+        <thead>
+          <tr>
+            <th>Construct</th>
+            <th>Category</th>
+            <th>Survey Waves</th>
+            <th>Report</th>
+          </tr>
+        </thead>
+        <tbody id="constructs-tbody">
+          {{construct_rows}}
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>
+
+{{footer}}
+
+<script src="js/nav.js"></script>
+<script src="js/constructs.js"></script>
+</body>
+</html>

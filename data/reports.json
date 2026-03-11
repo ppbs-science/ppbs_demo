@@ -1,0 +1,146 @@
+[
+  {
+    "filename": "general_sj.html",
+    "title": "General System Justification",
+    "category": "Political Psychology",
+    "description": "Motivation to perceive existing social, political and economic order as fair, legitimate, and justified."
+  },
+  {
+    "filename": "econ_sj.html",
+    "title": "Economic System Justification",
+    "category": "Political Psychology",
+    "description": "Perception of unequal distribution of financial means as fair and legitimate."
+  },
+  {
+    "filename": "gender_sj.html",
+    "title": "Gender System Justification",
+    "category": "Political Psychology",
+    "description": "Cultural divisions of labor between men and women characterized as natural, legitimate and inevitable."
+  },
+  {
+    "filename": "RWA.html",
+    "title": "Right-Wing Authoritarianism",
+    "category": "Political Psychology",
+    "description": "Authoritarian aggression, submission, and conventionalism dimensions of RWA."
+  },
+  {
+    "filename": "SDO.html",
+    "title": "Social Dominance Orientation",
+    "category": "Political Psychology",
+    "description": "Intergroup dominance and anti-egalitarianism dimensions of social dominance."
+  },
+  {
+    "filename": "Justice_Sensitivity.html",
+    "title": "Justice Sensitivity",
+    "category": "Political Psychology",
+    "description": "Individual concern for justice from victim, beneficiary, observer, and perpetrator perspectives."
+  },
+  {
+    "filename": "empathy.html",
+    "title": "Empathy",
+    "category": "Political Psychology",
+    "description": "Empathic concern, perspective taking, and personal distress dimensions."
+  },
+  {
+    "filename": "sym_ideology.html",
+    "title": "Symbolic Ideology",
+    "category": "Political Psychology",
+    "description": "Liberal-conservative self-placement across general, social, and economic dimensions."
+  },
+  {
+    "filename": "animal_welfare.html",
+    "title": "Animal Welfare",
+    "category": "Attitudes",
+    "description": "Attitudes towards animal welfare and the exploitation of nonhuman animals."
+  },
+  {
+    "filename": "BLM.html",
+    "title": "Black Lives Matter",
+    "category": "Attitudes",
+    "description": "Support for the Black Lives Matter movement and its determinants."
+  },
+  {
+    "filename": "collective_narcissism.html",
+    "title": "Collective Narcissism",
+    "category": "Attitudes",
+    "description": "Ingroup identification tied to an unrealistic belief about the unparalleled greatness of an ingroup."
+  },
+  {
+    "filename": "conspiratorial_thinking.html",
+    "title": "Conspiratorial Thinking",
+    "category": "Attitudes",
+    "description": "Conspiracy mentality and conspiracist ideation as a higher-order belief system."
+  },
+  {
+    "filename": "worldview.html",
+    "title": "Dangerous & Competitive Worldview",
+    "category": "Attitudes",
+    "description": "Competitive and dangerous worldviews as predictors of SDO and RWA."
+  },
+  {
+    "filename": "environmentalism.html",
+    "title": "Environmentalism",
+    "category": "Attitudes",
+    "description": "Attitudes towards the protection of the natural environment."
+  },
+  {
+    "filename": "gender_equality.html",
+    "title": "Gender Equality",
+    "category": "Attitudes",
+    "description": "Attitudes towards gender equality and related policy positions."
+  },
+  {
+    "filename": "gun_control.html",
+    "title": "Gun Control Attitudes",
+    "category": "Attitudes",
+    "description": "Attitudes towards gun control legislation and policy."
+  },
+  {
+    "filename": "narcissism.html",
+    "title": "Narcissism",
+    "category": "Attitudes",
+    "description": "Sub-clinical narcissism involving a grandiose yet fragile sense of self and entitlement."
+  },
+  {
+    "filename": "prejudice.html",
+    "title": "Prejudice",
+    "category": "Attitudes",
+    "description": "Black antagonism, homo-negativity, and xenophobia measures."
+  },
+  {
+    "filename": "religiosity.html",
+    "title": "Religiosity",
+    "category": "Attitudes",
+    "description": "Religious beliefs, practices, and their relation to political behavior."
+  },
+  {
+    "filename": "science_skepticism.html",
+    "title": "Science Skepticism",
+    "category": "Attitudes",
+    "description": "Mistrust of scientific findings and skepticism towards expertise."
+  },
+  {
+    "filename": "zeitgeist.html",
+    "title": "Zeitgeist",
+    "category": "Attitudes",
+    "description": "Collective evaluation of current and future society, social and personal discontent."
+  },
+  {
+    "filename": "libertarianism.html",
+    "title": "Libertarianism",
+    "category": "Political Science",
+    "description": "Ideology prioritizing individual liberty over authority and traditional norms."
+  },
+  {
+    "filename": "populism.html",
+    "title": "Populism",
+    "category": "Political Science",
+    "description": "Anti-elitism, Manichean worldview, and the general will of the people."
+  },
+  {
+    "filename": "political_sophistication.html",
+    "title": "Political Sophistication",
+    "category": "Political Science",
+    "description": "Knowledge of civics and politics across 10 items."
+  }
+]

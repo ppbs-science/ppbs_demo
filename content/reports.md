@@ -1,0 +1,1 @@
+Each report provides a transparent, reproducible analysis of a specific political-psychological construct measured in the PPBS surveys. Reports include descriptive statistics, scale reliability, and visualizations.

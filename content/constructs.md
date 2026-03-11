@@ -1,0 +1,1 @@
+PPBS surveys more than 60 political and psychological constructs using full validated instruments. The table below lists constructs measured across the PPBS survey waves, with links to the reproducible report for each where available.

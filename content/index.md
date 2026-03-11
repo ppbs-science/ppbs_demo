@@ -1,0 +1,3 @@
+The Psychology of Political Behavior Studies (PPBS) are an ongoing series of quota-based national cross-sections containing a set of repeating core questions on social and political attitudes, values, voting and candidate preferences, and political participation.
+
+PPBS leverages 12 datasets, collected through professional survey companies, for a combined N of 21,107 interviews. It includes four nationally representative cross-sections of the American population (N=7,259) during the last three elections in the US, their replication/confirmatory analogues (N=11,582), and repeated measures recontacts (N=2,215) across multiple time-points, allowing for both within and between research designs.

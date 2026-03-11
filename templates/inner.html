@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>{{title}} — PPBS</title>
+  <link rel="stylesheet" href="css/l6.css">
+</head>
+<body data-page="{{page}}">
+
+{{topbar}}
+
+<div class="page-header">
+  <div class="sec-label">{{label}}</div>
+  <div class="header-body">
+    <h1>{{heading}}</h1>
+    {{#subtitle}}<p class="subtitle">{{subtitle}}</p>{{/subtitle}}
+  </div>
+</div>
+
+<div class="page-content">
+  <div class="sec-label">{{section_label}}</div>
+  <div class="content-body">
+    {{content}}
+  </div>
+</div>
+
+{{footer}}
+
+<script src="js/nav.js"></script>
+</body>
+</html>

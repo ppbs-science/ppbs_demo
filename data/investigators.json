@@ -1,0 +1,80 @@
+[
+  {
+    "name": "Flavio Azevedo",
+    "role": "Principal Investigator",
+    "affiliation": "Utrecht University",
+    "photo": "img/team/flavio.png",
+    "bio": "Brazilian assistant professor of Interdisciplinary Social Sciences at Utrecht University. His research focuses on the political psychology of ideological attitudes and integrating open science into higher education. PI of PPBS and co-founder of FORRT.",
+    "website": "http://flavioazevedo.com/"
+  },
+  {
+    "name": "Jasmin Hagemann",
+    "role": "Researcher",
+    "affiliation": "University of Amsterdam",
+    "photo": "img/team/JH.png",
+    "bio": "Researcher in political psychology who completed a Research Master in Psychology at the University of Amsterdam. Her work focuses on political behavior, polarization, and democratic resilience."
+  },
+  {
+    "name": "Ana Clara Ebert",
+    "role": "Researcher",
+    "affiliation": "Vrije Universiteit Amsterdam",
+    "photo": "img/team/AE.JPG",
+    "bio": "Research Master's student in Social Psychology at VU Amsterdam, interested in the social and psychological mechanisms that maintain socioeconomic inequality."
+  },
+  {
+    "name": "Patrick Forscher",
+    "role": "Collaborator",
+    "affiliation": "CORE Lab",
+    "photo": "img/team/PF.png",
+    "bio": "Post-doc researcher at the Co-Regulation (CORE) Lab focusing on meta-science and social disparities."
+  },
+  {
+    "name": "Andre Kaiser",
+    "role": "Collaborator",
+    "affiliation": "University of Cologne",
+    "photo": "img/team/AK.png",
+    "bio": "Professor of Comparative Politics at University of Cologne and Director of Cologne Center for Comparative Politics."
+  },
+  {
+    "name": "Christopher S. Parker",
+    "role": "Collaborator",
+    "affiliation": "University of Washington",
+    "photo": "img/team/CP.png",
+    "bio": "Professor of Political Science at the University of Washington, author of 'Fighting for Democracy' and 'Change They Can't Believe In'."
+  },
+  {
+    "name": "Tobias Rothmund",
+    "role": "Collaborator",
+    "affiliation": "Friedrich Schiller University Jena",
+    "photo": "img/team/TR.png",
+    "bio": "Professor at the Institute for Communication Science at Friedrich Schiller University, investigating psychological processes in media-mediated communication."
+  },
+  {
+    "name": "Ben Saunders",
+    "role": "Collaborator",
+    "affiliation": "Long Island University",
+    "photo": "img/team/BS.png",
+    "bio": "Associate Professor at Long Island University, Brooklyn. Research interests include social identity, stereotype threat, and system justification theory."
+  },
+  {
+    "name": "Joshua Tybur",
+    "role": "Collaborator",
+    "affiliation": "VU Amsterdam",
+    "photo": "img/team/JT.png",
+    "bio": "Associate Professor in Experimental and Applied Psychology at VU Amsterdam, studying fundamental problems of life including disease avoidance, mating, and interdependence."
+  },
+  {
+    "name": "Leticia Micheli",
+    "role": "Contributor",
+    "affiliation": "Leibniz University Hannover",
+    "photo": "img/team/LM.png",
+    "bio": "Postdoctoral fellow at the Institute of Psychology, Leibniz University Hannover, researching how inequality, scarcity and unfairness influence decision-making."
+  },
+  {
+    "name": "Tamara Marques",
+    "role": "Contributor",
+    "affiliation": "University of Minho",
+    "photo": "img/team/TM.png",
+    "bio": "Research assistant doing a masters in Sociology at University of Minho, Portugal, interested in Black Lives Matter, race & ethnicity, and social movements."
+  }
+]
