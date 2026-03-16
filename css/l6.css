@@ -387,6 +387,7 @@ footer .f-body {
   background: var(--ink);
   color: var(--paper);
 }
+.card-grid .card:hover h3 { color: var(--paper); }
 .card-grid .card h3 {
   font-size: 15px;
   font-weight: 800;
@@ -559,6 +560,15 @@ footer .f-body {
   letter-spacing: .06em;
   border: 1px solid var(--rule);
   background: transparent;
+}
+a.wave-badge-link {
+  color: var(--accent);
+  text-decoration: none;
+  border-color: var(--accent);
+}
+a.wave-badge-link:hover {
+  background: var(--accent);
+  color: #fff;
 }
 
 /* --- Filter categories --- */

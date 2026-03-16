@@ -199,18 +199,37 @@ function buildTeamCards() {
 }
 
 // --- Build construct rows from JSON ---
+function waveToYear(wave) {
+  if (wave.startsWith('2018')) return '2018';
+  return wave; // "2016", "2020"
+}
+
 function buildConstructRows() {
   const dataFile = path.join(DATA, 'constructs.json');
   if (!fs.existsSync(dataFile)) return '';
 
+  const reportsDir = path.join(SITE, 'reports');
   const constructs = readJSON(dataFile);
   return constructs.map(c => {
-    const waves = (c.waves || []).map(w =>
-      `<span class="wave-badge">${w}</span>`
-    ).join('');
-    const report = c.report_url
-      ? `<a href="${c.report_url}" style="color: var(--accent);">View</a>`
-      : '';
+    const waves = (c.waves || []).map(w => {
+      if (c.report_base) {
+        const year = waveToYear(w);
+        const reportFile = path.join(reportsDir, year, `${c.report_base}.html`);
+        if (fs.existsSync(reportFile)) {
+          return `<a href="reports/${year}/${c.report_base}.html" class="wave-badge wave-badge-link">${w}</a>`;
+        }
+      }
+      return `<span class="wave-badge">${w}</span>`;
+    }).join('');
+
+    let report = '';
+    if (c.report_base) {
+      const compFile = path.join(reportsDir, 'comparison', `${c.report_base}_comparison.html`);
+      if (fs.existsSync(compFile)) {
+        report = `<a href="reports/comparison/${c.report_base}_comparison.html" style="color: var(--accent);">Cross-wave</a>`;
+      }
+    }
+
     return `<tr data-category="${c.category || ''}">
       <td>${c.name}</td>
       <td>${c.category || ''}</td>
