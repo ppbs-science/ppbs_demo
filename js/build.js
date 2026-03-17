@@ -119,7 +119,8 @@ function buildHomepage() {
     .replace('{{stat_interviews}}', stats.interviews)
     .replace('{{stat_constructs}}', stats.constructs)
     .replace('{{stat_datasets}}', stats.datasets)
-    .replace('{{stat_cycles}}', stats.cycles);
+    .replace('{{stat_cycles}}', stats.cycles)
+    .replace('{{stat_countries}}', stats.countries);
 
   const mdFile = path.join(CONTENT, 'index.md');
   if (fs.existsSync(mdFile)) {
@@ -147,7 +148,7 @@ function buildReportCards() {
     { dir: '2016', label: 'PPBS 2016' },
     { dir: '2018', label: 'PPBS 2018' },
     { dir: '2020', label: 'PPBS 2020' },
-    { dir: 'comparison', label: 'Cross-Wave Comparisons' }
+    { dir: 'comparison', label: 'Multi-Year Comparisons' }
   ];
 
   let html = '';
@@ -162,7 +163,8 @@ function buildReportCards() {
 
     if (files.length === 0) continue;
 
-    html += `<h2>${group.label}</h2>\n`;
+    html += `<details class="report-group">\n`;
+    html += `  <summary><h2>${group.label}</h2></summary>\n`;
     html += `    <div class="card-grid">\n`;
 
     for (const file of files) {
@@ -174,6 +176,7 @@ function buildReportCards() {
     }
 
     html += `    </div>\n`;
+    html += `</details>\n`;
   }
 
   return html;
@@ -226,7 +229,7 @@ function buildConstructRows() {
     if (c.report_base) {
       const compFile = path.join(reportsDir, 'comparison', `${c.report_base}_comparison.html`);
       if (fs.existsSync(compFile)) {
-        report = `<a href="reports/comparison/${c.report_base}_comparison.html" style="color: var(--accent);">Cross-wave</a>`;
+        report = `<a href="reports/comparison/${c.report_base}_comparison.html" style="color: var(--accent);">Multi-year</a>`;
       }
     }
 
