@@ -24,7 +24,7 @@
     {{content}}
 
     <h2>Contact Us</h2>
-    <form class="contact-form" action="https://formspree.io/f/ppbs" method="POST">
+    <form class="contact-form" id="contact-form">
       <label for="name">Name</label>
       <input type="text" id="name" name="name" required>
 
@@ -39,6 +39,45 @@
 
       <button type="submit">Send Message</button>
     </form>
+    <div class="form-success" id="form-success" style="display:none;">
+      <p>Thank you for your message! We'll get back to you soon.</p>
+    </div>
+    <div class="form-error" id="form-error" style="display:none;">
+      <p>Something went wrong. Please try again or email us directly at contact@ppbs.science.</p>
+    </div>
+    <script>
+      document.getElementById('contact-form').addEventListener('submit', async function(e) {
+        e.preventDefault();
+        const btn = this.querySelector('button');
+        btn.disabled = true;
+        btn.textContent = 'Sending...';
+        try {
+          const res = await fetch('https://api.web3forms.com/submit', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({
+              access_key: 'ac8aa87b-7017-4227-9c11-5c0602da8c79',
+              subject: 'New PPBS website inquiry',
+              name: this.name.value,
+              email: this.email.value,
+              affiliation: this.affiliation.value,
+              message: this.message.value
+            })
+          });
+          const data = await res.json();
+          if (data.success) {
+            this.style.display = 'none';
+            document.getElementById('form-success').style.display = 'block';
+          } else {
+            throw new Error();
+          }
+        } catch {
+          document.getElementById('form-error').style.display = 'block';
+          btn.disabled = false;
+          btn.textContent = 'Send Message';
+        }
+      });
+    </script>
   </div>
 </div>
 

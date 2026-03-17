@@ -1,80 +1,107 @@
 [
   {
-    "name": "Flavio Azevedo",
-    "role": "Principal Investigator",
-    "affiliation": "Utrecht University",
-    "photo": "img/team/flavio.png",
-    "bio": "Brazilian assistant professor of Interdisciplinary Social Sciences at Utrecht University. His research focuses on the political psychology of ideological attitudes and integrating open science into higher education. PI of PPBS and co-founder of FORRT.",
-    "website": "http://flavioazevedo.com/"
+    "name": "Ana Clara Ebert",
+    "group": "Researchers",
+    "affiliation": "Vrije Universiteit Amsterdam",
+    "photo": "img/team/AE.JPG",
+    "bio": "Research Master's student in Social Psychology at VU Amsterdam, interested in the social and psychological mechanisms that maintain socioeconomic inequality.",
+    "contact": { "url": "https://www.linkedin.com/in/ana-clara-kaneko-ebert-8811a815b/", "icon": "linkedin" }
   },
   {
     "name": "Jasmin Hagemann",
-    "role": "Researcher",
+    "group": "Researchers",
     "affiliation": "University of Amsterdam",
     "photo": "img/team/JH.png",
-    "bio": "Researcher in political psychology who completed a Research Master in Psychology at the University of Amsterdam. Her work focuses on political behavior, polarization, and democratic resilience."
+    "bio": "Researcher in political psychology who completed a Research Master in Psychology at the University of Amsterdam. Her work focuses on political behavior, polarization, and democratic resilience.",
+    "contact": { "url": "https://www.linkedin.com/in/jasmin-hagemann-284585227/", "icon": "linkedin" }
   },
   {
-    "name": "Ana Clara Ebert",
-    "role": "Researcher",
-    "affiliation": "Vrije Universiteit Amsterdam",
-    "photo": "img/team/AE.JPG",
-    "bio": "Research Master's student in Social Psychology at VU Amsterdam, interested in the social and psychological mechanisms that maintain socioeconomic inequality."
-  },
-  {
-    "name": "Patrick Forscher",
-    "role": "Collaborator",
-    "affiliation": "CORE Lab",
-    "photo": "img/team/PF.png",
-    "bio": "Post-doc researcher at the Co-Regulation (CORE) Lab focusing on meta-science and social disparities."
+    "name": "Flavio Azevedo",
+    "group": "Researchers",
+    "affiliation": "Utrecht University",
+    "photo": "img/team/flavio.png",
+    "bio": "Brazilian assistant professor of Interdisciplinary Social Sciences at Utrecht University. His research focuses on the political psychology of ideological attitudes and integrating open science into higher education. PI of PPBS and co-founder of FORRT.",
+    "contact": { "url": "https://www.linkedin.com/in/flavio-azevedo-571a371aa", "icon": "linkedin" },
+    "profile": { "url": "http://flavioazevedo.com/", "icon": "website" },
+    "sort_last": true
   },
   {
     "name": "Andre Kaiser",
-    "role": "Collaborator",
+    "group": "Collaborators",
     "affiliation": "University of Cologne",
     "photo": "img/team/AK.png",
-    "bio": "Professor of Comparative Politics at University of Cologne and Director of Cologne Center for Comparative Politics."
-  },
-  {
-    "name": "Christopher S. Parker",
-    "role": "Collaborator",
-    "affiliation": "University of Washington",
-    "photo": "img/team/CP.png",
-    "bio": "Professor of Political Science at the University of Washington, author of 'Fighting for Democracy' and 'Change They Can't Believe In'."
-  },
-  {
-    "name": "Tobias Rothmund",
-    "role": "Collaborator",
-    "affiliation": "Friedrich Schiller University Jena",
-    "photo": "img/team/TR.png",
-    "bio": "Professor at the Institute for Communication Science at Friedrich Schiller University, investigating psychological processes in media-mediated communication."
+    "bio": "Professor of Comparative Politics at University of Cologne and Director of Cologne Center for Comparative Politics.",
+    "profile": { "url": "https://wiso.uni-koeln.de/en/research/professors/professors-a-to-z/prof-dr-andre-kaiser", "icon": "website" }
   },
   {
     "name": "Ben Saunders",
-    "role": "Collaborator",
+    "group": "Collaborators",
     "affiliation": "Long Island University",
     "photo": "img/team/BS.png",
-    "bio": "Associate Professor at Long Island University, Brooklyn. Research interests include social identity, stereotype threat, and system justification theory."
+    "bio": "Associate Professor at Long Island University, Brooklyn. Research interests include social identity, stereotype threat, and system justification theory.",
+    "contact": { "url": "https://www.linkedin.com/in/bensaun", "icon": "linkedin" },
+    "profile": { "url": "https://scholar.google.com/citations?user=GdRk_6MAAAAJ&hl=en", "icon": "scholar" }
+  },
+  {
+    "name": "Christopher S. Parker",
+    "group": "Collaborators",
+    "affiliation": "University of Washington",
+    "photo": "img/team/CP.png",
+    "bio": "Professor of Political Science at the University of Washington, author of 'Fighting for Democracy' and 'Change They Can't Believe In'.",
+    "profile": { "url": "http://christophersebastianparker.com/", "icon": "website" }
   },
   {
     "name": "Joshua Tybur",
-    "role": "Collaborator",
+    "group": "Collaborators",
     "affiliation": "VU Amsterdam",
     "photo": "img/team/JT.png",
-    "bio": "Associate Professor in Experimental and Applied Psychology at VU Amsterdam, studying fundamental problems of life including disease avoidance, mating, and interdependence."
+    "bio": "Associate Professor in Experimental and Applied Psychology at VU Amsterdam, studying fundamental problems of life including disease avoidance, mating, and interdependence.",
+    "profile": { "url": "http://www.joshtybur.com/", "icon": "website" }
+  },
+  {
+    "name": "Patrick Forscher",
+    "group": "Collaborators",
+    "affiliation": "CORE Lab",
+    "photo": "img/team/PF.png",
+    "bio": "Post-doc researcher at the Co-Regulation (CORE) Lab focusing on meta-science and social disparities.",
+    "profile": { "url": "https://patrickforscher.com/", "icon": "website" }
+  },
+  {
+    "name": "Tobias Rothmund",
+    "group": "Collaborators",
+    "affiliation": "Friedrich Schiller University Jena",
+    "photo": "img/team/TR.png",
+    "bio": "Professor at the Institute for Communication Science at Friedrich Schiller University, investigating psychological processes in media-mediated communication.",
+    "profile": { "url": "https://www.uni-jena.de/ifkw-en/prof_dr_tobias_rothmund", "icon": "website" }
   },
   {
     "name": "Leticia Micheli",
-    "role": "Contributor",
+    "group": "Past Researchers",
     "affiliation": "Leibniz University Hannover",
     "photo": "img/team/LM.png",
-    "bio": "Postdoctoral fellow at the Institute of Psychology, Leibniz University Hannover, researching how inequality, scarcity and unfairness influence decision-making."
+    "bio": "Postdoctoral fellow at the Institute of Psychology, Leibniz University Hannover, researching how inequality, scarcity and unfairness influence decision-making.",
+    "profile": { "url": "https://leticiamicheli.github.io/", "icon": "website" }
   },
   {
     "name": "Tamara Marques",
-    "role": "Contributor",
+    "group": "Past Researchers",
     "affiliation": "University of Minho",
     "photo": "img/team/TM.png",
-    "bio": "Research assistant doing a masters in Sociology at University of Minho, Portugal, interested in Black Lives Matter, race & ethnicity, and social movements."
+    "bio": "Research assistant doing a masters in Sociology at University of Minho, Portugal, interested in Black Lives Matter, race & ethnicity, and social movements.",
+    "contact": { "url": "https://www.linkedin.com/in/tamaramarques/", "icon": "linkedin" }
+  },
+  {
+    "name": "Placeholder",
+    "group": "Funders",
+    "affiliation": "TBD",
+    "photo": "",
+    "bio": "Funding acknowledgements to be added."
+  },
+  {
+    "name": "Placeholder",
+    "group": "Mentors",
+    "affiliation": "TBD",
+    "photo": "",
+    "bio": "Mentor acknowledgements to be added."
   }
 ]
