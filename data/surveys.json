@@ -1,0 +1,9 @@
+[
+  {"id": "ppbs2016", "title": "PPBS 2016", "category": "Cross-section", "description": "2016 US election nationally representative cross-section", "report": "methods/ppbs2016.html"},
+  {"id": "ppbs2018_pre", "title": "PPBS 2018 Pre", "category": "Cross-section", "description": "2018 US midterm pre-election cross-section", "report": "methods/ppbs2018_pre.html"},
+  {"id": "ppbs2018_post", "title": "PPBS 2018 Post", "category": "Cross-section", "description": "2018 US midterm post-election cross-section", "report": "methods/ppbs2018_post.html"},
+  {"id": "ppbs2020_pre", "title": "PPBS 2020 Pre", "category": "Cross-section", "description": "2020 US election pre-election cross-section", "report": "methods/ppbs2020_pre.html"},
+  {"id": "2016recontacts", "title": "2016 Recontacts", "category": "Recontact", "description": "Follow-up panel recontacts from 2016 respondents", "report": "methods/2016recontacts.html"},
+  {"id": "2018pre_recontacts", "title": "2018 Pre Recontacts", "category": "Recontact", "description": "Follow-up panel recontacts from 2018 pre-election respondents", "report": "methods/2018pre_recontacts.html"},
+  {"id": "2018post_recontacts", "title": "2018 Post Recontacts", "category": "Recontact", "description": "Follow-up panel recontacts from 2018 post-election respondents", "report": "methods/2018post_recontacts.html"}
+]

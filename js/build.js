@@ -301,6 +301,29 @@ function buildConstructRows() {
   }).join('\n        ');
 }
 
+// --- Build survey cards from JSON ---
+function buildSurveyCards() {
+  const dataFile = path.join(DATA, 'surveys.json');
+  if (!fs.existsSync(dataFile)) return '';
+
+  const surveys = readJSON(dataFile);
+  let html = '<div class="card-grid">\n';
+
+  for (const s of surveys) {
+    const reportExists = fs.existsSync(path.join(SITE, s.report));
+    const tag = reportExists ? 'a' : 'div';
+    const href = reportExists ? ` href="${s.report}"` : '';
+    html += `      <${tag} class="card"${href}>
+        <div class="card-category">${s.category}</div>
+        <h3>${s.title}</h3>
+        <div class="card-desc">${s.description}</div>
+      </${tag}>\n`;
+  }
+
+  html += '    </div>';
+  return html;
+}
+
 // --- Build inner pages ---
 function buildPage(page) {
   console.log(`  Building ${page.id}.html`);
@@ -336,6 +359,9 @@ function buildPage(page) {
   if (page.id === 'constructs') {
     template = template.replace('{{construct_rows}}', buildConstructRows());
   }
+  if (page.id === 'methodology') {
+    template = template.replace('{{survey_cards}}', buildSurveyCards());
+  }
 
   // Clean up any remaining template tags
   template = template.replace(/\{\{[^}]+\}\}/g, '');
@@ -367,6 +393,7 @@ function injectShellIntoSubdir(subdir, activePage) {
   .l6-shell-topbar { margin-bottom: 0; }
   .l6-shell-footer { margin-top: 40px; }
   body { background: var(--paper, #f2f0ec); }
+  .l6-shell-topbar .topbar .mark { background: transparent; color: inherit; }
 </style>`;
 
     for (const entry of fs.readdirSync(currentDir, { withFileTypes: true })) {
