@@ -26,6 +26,15 @@
     "sort_last": true
   },
   {
+    "name": "Lukas Wallrich",
+    "group": "Researchers",
+    "affiliation": "Birkbeck, University of London",
+    "photo": "img/team/LW.jpg",
+    "bio": "Senior Lecturer in Organisational Psychology at Birkbeck Business School, University of London. His research focuses on workforce diversity and organizational performance, and improving research reliability.",
+    "contact": { "url": "https://www.linkedin.com/in/lukas-wallrich/", "icon": "linkedin" },
+    "profile": { "url": "https://www.lukaswallrich.coffee/", "icon": "website" }
+  },
+  {
     "name": "Andre Kaiser",
     "group": "Collaborators",
     "affiliation": "University of Cologne",
