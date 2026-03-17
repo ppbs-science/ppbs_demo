@@ -6,7 +6,7 @@ PPBS is also being developed as an equity-oriented platform. Beyond advancing th
 
 There are several ways to get involved with PPBS:
 
-- **Data access**: Apply to use the PPBS dataset for your own research through our supervised proposal-based system
+- **Data access**: The PPBS dataset is currently available only to active collaborators. If you have an idea for a project using PPBS data, we welcome proposals and are happy to discuss collaboration opportunities
 - **Collaboration**: Join as a co-investigator on ongoing or new projects using PPBS data
 - **Methodological contributions**: Contribute to the development of survey instruments, analytic pipelines, or documentation
 - **Early-career support**: If you are an early-career researcher from an underrepresented context, reach out to discuss mentorship and collaboration opportunities
