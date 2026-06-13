@@ -93,7 +93,7 @@
     "name": "Iris Smal",
     "group": "Collaborators",
     "affiliation": "University of Amsterdam",
-    "photo": "img/team/IS.jpg",
+    "photo": "img/team/IS.png",
     "bio": "PhD candidate researching how opinions and attitudes form and change using complex systems models. Also Open Science Community Manager for OSCA.",
     "contact": { "url": "https://www.linkedin.com/in/iris-smal-734977235/", "icon": "linkedin" },
     "profile": { "url": "https://www.uva.nl/en/profile/s/m/i.m.smal/i.m.smal.html", "icon": "website" }
@@ -102,7 +102,7 @@
     "name": "Gabriel Gaudencio",
     "group": "Collaborators",
     "affiliation": "Universidade Presbiteriana Mackenzie, São Paulo, Brazil",
-    "photo": "img/team/GG.jpg",
+    "photo": "img/team/GG.png",
     "bio": "Clinical psychologist and neuroscientist specializing in moral decision-making, brain stimulation, and social neuroscience.",
     "profile": { "url": "https://scholar.google.com/citations?user=8O4g-dIAAAAJ&hl=pt-BR", "icon": "scholar" }
   },
