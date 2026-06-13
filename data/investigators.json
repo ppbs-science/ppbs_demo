@@ -16,23 +16,29 @@
     "contact": { "url": "https://www.linkedin.com/in/jasmin-hagemann-284585227/", "icon": "linkedin" }
   },
   {
-    "name": "Flavio Azevedo",
-    "group": "Researchers",
-    "affiliation": "Utrecht University",
-    "photo": "img/team/flavio.png",
-    "bio": "Brazilian assistant professor of Interdisciplinary Social Sciences at Utrecht University. His research focuses on the political psychology of ideological attitudes and integrating open science into higher education. PI of PPBS and co-founder of FORRT.",
-    "contact": { "url": "https://www.linkedin.com/in/flavio-azevedo-571a371aa", "icon": "linkedin" },
-    "profile": { "url": "http://flavioazevedo.com/", "icon": "website" },
-    "sort_last": true
-  },
-  {
     "name": "Lukas Wallrich",
     "group": "Researchers",
     "affiliation": "Birkbeck, University of London",
     "photo": "img/team/LW.jpg",
-    "bio": "Senior Lecturer in Organisational Psychology at Birkbeck Business School, University of London. His research focuses on workforce diversity and organizational performance, and improving research reliability.",
+    "bio": "Senior Lecturer in Organisational Psychology at Birkbeck Business School, University of London. His research focuses on workforce diversity and organizational performance, and improving statistical and methodological practices.",
     "contact": { "url": "https://www.linkedin.com/in/lukas-wallrich/", "icon": "linkedin" },
     "profile": { "url": "https://www.lukaswallrich.coffee/", "icon": "website" }
+  },
+  {
+    "name": "Max Wan",
+    "group": "Researchers",
+    "affiliation": "independent",
+    "profile": { "url": "https://orcid.org/0000-0002-6043-7349", "icon": "orcid" }
+  },
+  {
+    "name": "Flavio Azevedo",
+    "group": "Researchers",
+    "affiliation": "Utrecht University",
+    "photo": "img/team/flavio.png",
+    "bio": "Brazilian assistant professor of Interdisciplinary Social Sciences at Utrecht University. His research focuses on the political psychology of ideological attitudes and integrating open science practices.",
+    "contact": { "url": "https://www.linkedin.com/in/flavio-azevedo-571a371aa", "icon": "linkedin" },
+    "profile": { "url": "http://flavioazevedo.com/", "icon": "website" },
+    "sort_last": true
   },
   {
     "name": "Andre Kaiser",
@@ -84,6 +90,40 @@
     "profile": { "url": "https://www.uni-jena.de/ifkw-en/prof_dr_tobias_rothmund", "icon": "website" }
   },
   {
+    "name": "Iris Smal",
+    "group": "Collaborators",
+    "affiliation": "University of Amsterdam",
+    "photo": "img/team/IS.jpg",
+    "bio": "PhD candidate researching how opinions and attitudes form and change using complex systems models. Also Open Science Community Manager for OSCA.",
+    "contact": { "url": "https://www.linkedin.com/in/iris-smal-734977235/", "icon": "linkedin" },
+    "profile": { "url": "https://www.uva.nl/en/profile/s/m/i.m.smal/i.m.smal.html", "icon": "website" }
+  },
+  {
+    "name": "Gabriel Gaudencio",
+    "group": "Collaborators",
+    "affiliation": "Universidade Presbiteriana Mackenzie, São Paulo, Brazil",
+    "photo": "img/team/GG.jpg",
+    "bio": "Clinical psychologist and neuroscientist specializing in moral decision-making, brain stimulation, and social neuroscience.",
+    "profile": { "url": "https://scholar.google.com/citations?user=8O4g-dIAAAAJ&hl=pt-BR", "icon": "scholar" }
+  },
+  {
+    "name": "Felipe Vilanova",
+    "group": "Collaborators",
+    "affiliation": "Universidade La Salle, Canoas, Brazil",
+    "photo": "img/team/FV.jpg",
+    "bio": "Social/political psychologist researching right-wing authoritarianism, corruption, ideology, and political attitudes. ISPP Governing Council member (2025-2028).",
+    "profile": { "url": "https://scholar.google.com/citations?user=Xl12HsoAAAAJ&hl=en", "icon": "scholar" }
+  },
+  {
+    "name": "Roosevelt Vilar",
+    "group": "Collaborators",
+    "affiliation": "Universidade Cruzeiro do Sul, São Paulo, Brazil",
+    "photo": "img/team/RV.jpg",
+    "bio": "Researcher focused on human values, political behavior, political participation, and cross-cultural psychology. PhD from Massey University (NZ).",
+    "contact": { "url": "https://br.linkedin.com/in/roosevelt-vilar-ba3a44a0", "icon": "linkedin" },
+    "profile": { "url": "https://scholar.google.com/citations?user=5YZFeHAAAAAJ&hl=en", "icon": "scholar" }
+  },
+  {
     "name": "Leticia Micheli",
     "group": "Past Researchers",
     "affiliation": "Leibniz University Hannover",
@@ -100,11 +140,92 @@
     "contact": { "url": "https://www.linkedin.com/in/tamaramarques/", "icon": "linkedin" }
   },
   {
-    "name": "Placeholder",
+    "name": "Gijs Schumacher",
     "group": "Funders",
-    "affiliation": "TBD",
-    "photo": "",
-    "bio": "Funding acknowledgements to be added."
+    "affiliation": "University of Amsterdam",
+    "photo": "img/team/GS.jpg",
+    "bio": "Professor of Political Psychology researching how emotions influence democracy and political decision-making. Co-director of the Hot Politics Lab at UvA.",
+    "contact": { "url": "https://www.linkedin.com/in/gijs-schumacher-304221b/", "icon": "linkedin" },
+    "profile": { "url": "https://www.gijsschumacher.nl/", "icon": "website" }
+  },
+  {
+    "name": "Joe Vitriol",
+    "group": "Funders",
+    "affiliation": "Lehigh University",
+    "photo": "img/team/JV.jpg",
+    "bio": "Assistant Professor at Lehigh University, College of Business. Studies causes, consequences, and solutions to bias in judgment and behavior in political, legal, and organizational settings.",
+    "contact": { "url": "https://www.linkedin.com/in/joseph-vitriol-01414436/", "icon": "linkedin" },
+    "profile": { "url": "http://www.joevitriol.com/", "icon": "website" }
+  },
+  {
+    "name": "Gaëlle Marinthe",
+    "group": "Funders",
+    "affiliation": "Université Clermont Auvergne, France",
+    "photo": "img/team/GM.jpg",
+    "bio": "Associate Professor specializing in identity processes, collective action, and intergroup relations. Research on collective narcissism and political extremism.",
+    "contact": { "url": "https://www.linkedin.com/in/gaelle-marinthe-980515a4/", "icon": "linkedin" },
+    "profile": { "url": "https://www.lapsco.fr/marinthe-gaelle.html", "icon": "website" }
+  },
+  {
+    "name": "Han van der Maas",
+    "group": "Funders",
+    "affiliation": "University of Amsterdam",
+    "photo": "img/team/HVM.jpg",
+    "bio": "Professor of Psychological Methods specializing in formalization and testing of psychological theories in cognition, attitudes, and intelligence. ERC grant recipient.",
+    "contact": { "url": "https://www.linkedin.com/in/han-l-j-van-der-maas-966b7111/", "icon": "linkedin" },
+    "profile": { "url": "https://www.uva.nl/en/profile/m/a/h.l.j.vandermaas/h.l.j.vandermaas.html", "icon": "website" }
+  },
+  {
+    "name": "Birol Akkus",
+    "group": "Funders",
+    "affiliation": "Utrecht University",
+    "photo": "img/team/BA.jpg",
+    "bio": "Assistant Professor researching the influence of culture and cultural values on adolescent/youth development, mental wellbeing, and risk behavior.",
+    "contact": { "url": "https://www.linkedin.com/in/birol-akkus-ab0b8b11/", "icon": "linkedin" },
+    "profile": { "url": "https://www.uu.nl/staff/BAkkus", "icon": "website" }
+  },
+  {
+    "name": "Meta van der Linden",
+    "group": "Funders",
+    "affiliation": "Utrecht University",
+    "photo": "img/team/MVL.jpg",
+    "bio": "Assistant Professor researching social psychology of immigration and refugee integration, examining inclusion/exclusion of migrants through an interdisciplinary lens.",
+    "contact": { "url": "https://www.linkedin.com/in/metavanderlinden/", "icon": "linkedin" },
+    "profile": { "url": "https://www.uu.nl/staff/MvanderLinden", "icon": "website" }
+  },
+  {
+    "name": "Tobias Stark",
+    "group": "Funders",
+    "affiliation": "Utrecht University",
+    "photo": "img/team/TS.jpg",
+    "bio": "Associate Professor specializing in ethnic prejudice, national identities, and interethnic relations. ERC Consolidator Grant recipient (€2M).",
+    "contact": { "url": "https://www.linkedin.com/in/tobiasstark/", "icon": "linkedin" },
+    "profile": { "url": "https://www.tobiasstark.nl/", "icon": "website" }
+  },
+  {
+    "name": "Robert Ross",
+    "group": "Funders",
+    "affiliation": "Macquarie University, Sydney",
+    "photo": "img/team/RR.jpg",
+    "bio": "Research Fellow researching psychology of belief — religious belief, delusional belief, and misinformation. Combines meta-science with cognitive psychology.",
+    "profile": { "url": "https://researchers.mq.edu.au/en/persons/robert-ross/", "icon": "website" }
+  },
+  {
+    "name": "Quinnehtukqut McLamore",
+    "group": "Funders",
+    "affiliation": "University of Missouri",
+    "photo": "img/team/QM.jpg",
+    "bio": "Assistant Professor in Psychological Sciences studying conflict narratives, group identities, conspiracy theories, and dehumanization.",
+    "profile": { "url": "https://scholar.google.com/citations?user=-K4hkmsAAAAJ&hl=en", "icon": "scholar" }
+  },
+  {
+    "name": "Verena Seibel",
+    "group": "Funders",
+    "affiliation": "Utrecht University",
+    "photo": "img/team/VS.jpg",
+    "bio": "Assistant Professor with tenure researching migration and social integration, examining how migrants access welfare services. ERC Starting Grant recipient (2025).",
+    "contact": { "url": "https://www.linkedin.com/in/verena-seibel-7bb54aa/", "icon": "linkedin" },
+    "profile": { "url": "https://www.verenaseibel.com/", "icon": "website" }
   },
   {
     "name": "Placeholder",
