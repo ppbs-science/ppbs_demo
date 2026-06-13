@@ -20,7 +20,7 @@
     "group": "Researchers",
     "affiliation": "Birkbeck, University of London",
     "photo": "img/team/LW.jpg",
-    "bio": "Senior Lecturer in Organisational Psychology at Birkbeck Business School, University of London. His research focuses on workforce diversity and organizational performance, and improving statistical and methodological practices.",
+    "bio": "Senior Lecturer in Organisational Psychology at Birkbeck Business School, University of London. His research focuses on workforce diversity and organizational performance, and improving workplace culture.",
     "contact": { "url": "https://www.linkedin.com/in/lukas-wallrich/", "icon": "linkedin" },
     "profile": { "url": "https://www.lukaswallrich.coffee/", "icon": "website" }
   },
@@ -37,7 +37,7 @@
     "group": "Researchers",
     "affiliation": "Utrecht University",
     "photo": "img/team/flavio.png",
-    "bio": "Brazilian assistant professor of Interdisciplinary Social Sciences at Utrecht University. His research focuses on the political psychology of ideological attitudes and integrating open science practices.",
+    "bio": "Brazilian assistant professor of Interdisciplinary Social Sciences at Utrecht University. His research focuses on the political psychology of ideological attitudes and integrating open science into higher education.",
     "contact": { "url": "https://www.linkedin.com/in/flavio-azevedo-571a371aa", "icon": "linkedin" },
     "profile": { "url": "http://flavioazevedo.com/", "icon": "website" },
     "sort_last": true
@@ -187,6 +187,15 @@
     "profile": { "url": "https://www.uu.nl/staff/BAkkus", "icon": "website" }
   },
   {
+    "name": "Tom Nijs",
+    "group": "Funders",
+    "affiliation": "Erasmus University Rotterdam",
+    "photo": "img/team/TN.jpg",
+    "bio": "Postdoctoral researcher with the Governance and Pluralism team at the Erasmus School of Social and Behavioural Sciences. Research focuses on political behavior and governance.",
+    "contact": { "url": "https://www.linkedin.com/in/tom-nijs/", "icon": "linkedin" },
+    "profile": { "url": "https://www.eur.nl/people/tom-nijs", "icon": "website" }
+  },
+  {
     "name": "Meta van der Linden",
     "group": "Funders",
     "affiliation": "Utrecht University",
@@ -196,13 +205,50 @@
     "profile": { "url": "https://www.uu.nl/staff/MvanderLinden", "icon": "website" }
   },
   {
-    "name": "Tobias Stark",
+    "name": "Flavio Azevedo",
+    "group": "Funders",
+    "affiliation": "Utrecht University",
+    "photo": "img/team/flavio.png",
+    "bio": "Brazilian assistant professor of Interdisciplinary Social Sciences at Utrecht University. His research focuses on the political psychology of ideological attitudes and integrating open science into higher education.",
+    "contact": { "url": "https://www.linkedin.com/in/flavio-azevedo-571a371aa", "icon": "linkedin" },
+    "profile": { "url": "http://flavioazevedo.com/", "icon": "website" },
+    "sort_last": true
+  },
+  {
+    "name": "Tobias H. Stark",
     "group": "Funders",
     "affiliation": "Utrecht University",
     "photo": "img/team/TS.jpg",
     "bio": "Associate Professor specializing in ethnic prejudice, national identities, and interethnic relations. ERC Consolidator Grant recipient (€2M).",
     "contact": { "url": "https://www.linkedin.com/in/tobiasstark/", "icon": "linkedin" },
     "profile": { "url": "https://www.tobiasstark.nl/", "icon": "website" }
+  },
+  {
+    "name": "Verena Seibel",
+    "group": "Funders",
+    "affiliation": "Utrecht University",
+    "photo": "img/team/VS.jpg",
+    "bio": "Assistant Professor with tenure researching migration and social integration, examining how migrants access welfare services. ERC Starting Grant recipient (2025).",
+    "contact": { "url": "https://www.linkedin.com/in/verena-seibel-7bb54aa/", "icon": "linkedin" },
+    "profile": { "url": "https://www.verenaseibel.com/", "icon": "website" }
+  },
+  {
+    "name": "Ekaterina Rashkova-Gerbrands",
+    "group": "Funders",
+    "affiliation": "Utrecht University",
+    "photo": "img/team/ER.jpg",
+    "bio": "Associate Professor of Comparative Politics at the School of Governance at Utrecht University. Co-Director of the PPE College Utrecht. Research focuses on comparative politics and policy.",
+    "contact": { "url": "https://www.linkedin.com/in/ekaterina-rashkova-gerbrands/", "icon": "linkedin" },
+    "profile": { "url": "https://www.uu.nl/staff/ERashkovaGerbrands", "icon": "website" }
+  },
+  {
+    "name": "Nick Carnes",
+    "group": "Funders",
+    "affiliation": "Duke University",
+    "photo": "img/team/NC.jpg",
+    "bio": "Professor at the Sanford School of Public Policy at Duke University with appointments in Political Science and Sociology. Research focuses on American politics, economic and social class inequality, and political representation.",
+    "contact": { "url": "https://www.linkedin.com/in/nicholas-carnes/", "icon": "linkedin" },
+    "profile": { "url": "https://people.duke.edu/~nwc8/", "icon": "website" }
   },
   {
     "name": "Robert Ross",
@@ -219,15 +265,6 @@
     "photo": "img/team/QM.jpg",
     "bio": "Assistant Professor in Psychological Sciences studying conflict narratives, group identities, conspiracy theories, and dehumanization.",
     "profile": { "url": "https://scholar.google.com/citations?user=-K4hkmsAAAAJ&hl=en", "icon": "scholar" }
-  },
-  {
-    "name": "Verena Seibel",
-    "group": "Funders",
-    "affiliation": "Utrecht University",
-    "photo": "img/team/VS.jpg",
-    "bio": "Assistant Professor with tenure researching migration and social integration, examining how migrants access welfare services. ERC Starting Grant recipient (2025).",
-    "contact": { "url": "https://www.linkedin.com/in/verena-seibel-7bb54aa/", "icon": "linkedin" },
-    "profile": { "url": "https://www.verenaseibel.com/", "icon": "website" }
   },
   {
     "name": "Placeholder",
