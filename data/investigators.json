@@ -29,7 +29,7 @@
     "group": "Researchers",
     "affiliation": "Psychology of Political Behavior Studies",
     "photo": "img/team/MW.jpg",
-    "bio": "Data analyst and interdisciplinary researcher.", 
+    "bio": "Data analyst and interdisciplinary researcher.",
     "profile": { "url": "https://orcid.org/0000-0002-6043-7349", "icon": "orcid" }
   },
   {
@@ -249,6 +249,15 @@
     "bio": "Professor at the Sanford School of Public Policy at Duke University with appointments in Political Science and Sociology. Research focuses on American politics, economic and social class inequality, and political representation.",
     "contact": { "url": "https://www.linkedin.com/in/nicholas-carnes/", "icon": "linkedin" },
     "profile": { "url": "https://people.duke.edu/~nwc8/", "icon": "website" }
+  },
+  {
+    "name": "Iris Smal",
+    "group": "Funders",
+    "affiliation": "University of Amsterdam",
+    "photo": "img/team/IS.png",
+    "bio": "PhD candidate researching how opinions and attitudes form and change using complex systems models. Also Open Science Community Manager for OSCA.",
+    "contact": { "url": "https://www.linkedin.com/in/iris-smal-734977235/", "icon": "linkedin" },
+    "profile": { "url": "https://www.uva.nl/en/profile/s/m/i.m.smal/i.m.smal.html", "icon": "website" }
   },
   {
     "name": "Robert Ross",
