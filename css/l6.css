@@ -2,7 +2,7 @@
    L6 Swiss Typographic Green — PPBS
    ========================================= */
 
-@import url('https://fonts.googleapis.com/css2?family=Archivo:wght@400;600;700;800;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Archivo:wght@400;600;700;800;900&family=Domine:wght@400;500;600;700&display=swap');
 
 *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
 a { color: inherit; text-decoration: none; }
@@ -63,6 +63,14 @@ body {
 .topbar nav a.active {
   background: var(--ink);
   color: var(--paper);
+}
+.topbar nav a.nav-github {
+  margin-left: auto;
+  display: inline-flex;
+  align-items: center;
+  padding: 14px 18px;
+  border-right: none;
+  border-left: 1px solid var(--rule);
 }
 .topbar .nav-toggle {
   display: none;
@@ -620,15 +628,50 @@ footer .f-body {
   letter-spacing: .06em;
   border: 1px solid var(--rule);
   background: transparent;
+  color: #777;
 }
-a.wave-badge-link {
+
+/* Report links: clearly-clickable accent pills in the Reports column.
+   Year pills link to that year's report; the filled pill is the multi-year
+   comparison. Distinct from the muted grey coverage badges in Survey Waves.
+   Selectors use `a.` to outrank `.page-content .content-body a`, which would
+   otherwise force every link to accent green + underline. */
+.constructs-table .report-links { display: flex; gap: 4px; flex-wrap: wrap; }
+.constructs-table a.report-link {
+  display: inline-block;
+  padding: 2px 9px;
+  font-size: 10px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: .06em;
+  border: 1px solid var(--accent);
   color: var(--accent);
   text-decoration: none;
-  border-color: var(--accent);
+  background: transparent;
+  transition: background .15s, color .15s;
 }
-a.wave-badge-link:hover {
+.constructs-table a.report-link:hover {
   background: var(--accent);
   color: #fff;
+}
+.constructs-table a.report-link-multi {
+  background: var(--accent);
+  color: #fff;
+}
+.constructs-table a.report-link-multi:hover {
+  background: var(--ink);
+  border-color: var(--ink);
+  color: #fff;
+}
+.constructs-table .report-none { color: #bbb; }
+
+/* --- Report/method figures (issue #10) ---
+   Generated plots have a baked-in white background. Multiply-blend lets the
+   white blend into the cream page while dark lines, text and points survive.
+   Scoped to generated figures so banners, logos and team photos are untouched. */
+img[src*="figure-html"],
+img[src*="figure-gfm"] {
+  mix-blend-mode: multiply;
 }
 
 /* --- Filter categories --- */
@@ -733,4 +776,118 @@ a.wave-badge-link:hover {
   .card-grid .card { border-right: 0; }
 
   .team-grid { grid-template-columns: repeat(2, 1fr); }
+}
+
+/* ============================================================
+   Quarto method / report pages rendered under the L6 shell:
+   left "On this page" TOC as a polished sticky sidebar.
+   ============================================================ */
+body.quarto-light { background: var(--paper); color: var(--ink); }
+
+/* Two-column layout: TOC | content. Override Quarto's standalone grid. */
+#quarto-content.page-columns {
+  display: grid !important;
+  grid-template-columns: 220px minmax(0, 1fr);
+  column-gap: 56px;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 28px 40px 0;
+  align-items: start;
+}
+/* styles.css pushes h1 down with padding-top:65 + margin-top:30; trim it
+   so the title isn't stranded far below the topbar. */
+main.content#quarto-document-content > .quarto-title-block h1.title,
+main.content#quarto-document-content h1.title,
+#title-block-header h1.title {
+  padding-top: 0 !important;
+  margin-top: 0 !important;
+}
+#title-block-header.quarto-title-block { margin-bottom: 1.4rem; }
+/* Quarto emits an empty right margin sidebar; hide it. */
+#quarto-margin-sidebar { display: none !important; }
+
+#quarto-sidebar-toc-left {
+  grid-column: 1;
+  position: sticky;
+  top: 28px;
+  max-height: calc(100vh - 56px);
+  overflow-y: auto;
+  padding-right: 22px;
+  border-right: 1px solid var(--rule);
+}
+main.content#quarto-document-content {
+  grid-column: 2;
+  min-width: 0;
+}
+
+/* TOC typography */
+nav#TOC {
+  font-family: 'Archivo', sans-serif;
+  font-size: 0.84rem;
+}
+nav#TOC .toc-title,
+nav#TOC > h2,
+#toc-title {
+  font-size: 0.68rem;
+  text-transform: uppercase;
+  letter-spacing: 0.14em;
+  color: #8a857c;
+  font-weight: 700;
+  margin: 0 0 0.85rem;
+  padding: 0;
+  border: 0;
+}
+nav#TOC ul { list-style: none; padding-left: 0; margin: 0; }
+nav#TOC ul ul { padding-left: 0.85rem; }
+nav#TOC li { margin: 0; }
+nav#TOC a {
+  display: block;
+  padding: 0.3rem 0 0.3rem 0.75rem;
+  margin-left: -0.75rem;
+  color: #5a5349;
+  text-decoration: none;
+  line-height: 1.3;
+  border-left: 2px solid transparent;
+  transition: color .15s ease, border-color .15s ease;
+}
+nav#TOC a:hover { color: var(--accent); }
+nav#TOC a.active,
+nav#TOC li.active > a {
+  color: var(--accent);
+  border-left-color: var(--accent);
+  font-weight: 600;
+}
+
+/* Narrow screens: TOC collapses above content */
+@media (max-width: 820px) {
+  #quarto-content.page-columns {
+    grid-template-columns: 1fr;
+    padding: 28px 20px 0;
+  }
+  #quarto-sidebar-toc-left {
+    grid-column: 1;
+    position: static;
+    max-height: none;
+    overflow: visible;
+    border-right: 0;
+    border-bottom: 1px solid var(--rule);
+    padding: 0 0 1rem;
+    margin-bottom: 1.6rem;
+  }
+  main.content#quarto-document-content { grid-column: 1; }
+}
+
+/* Body text styling ported from the methods' .mycontent wrapper
+   (the wrapper is removed at render time so headings reach the TOC). */
+main.content#quarto-document-content {
+  font-family: 'Domine', Georgia, 'Times New Roman', serif;
+  font-size: 1.0rem;
+  line-height: 1.7;
+}
+main.content#quarto-document-content .quarto-title .title,
+main.content#quarto-document-content h1,
+main.content#quarto-document-content h2,
+main.content#quarto-document-content h3 {
+  font-family: 'Archivo', sans-serif;
+  letter-spacing: -0.01em;
 }

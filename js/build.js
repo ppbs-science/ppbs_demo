@@ -273,24 +273,35 @@ function buildConstructRows() {
   const reportsDir = path.join(SITE, 'reports');
   const constructs = readJSON(dataFile);
   return constructs.map(c => {
-    const waves = (c.waves || []).map(w => {
-      if (c.report_base) {
-        const year = waveToYear(w);
+    // Survey-wave badges indicate coverage only (no longer double as report links).
+    const waves = (c.waves || [])
+      .map(w => `<span class="wave-badge">${w}</span>`)
+      .join('');
+
+    // Reports column: an explicit link per year a report exists, plus the
+    // multi-year comparison. This surfaces the per-wave reports that were
+    // previously hidden behind a subtle underline on the wave badges.
+    const reportLinks = [];
+    if (c.report_base) {
+      const years = [...new Set((c.waves || []).map(waveToYear))];
+      for (const year of years) {
         const reportFile = path.join(reportsDir, year, `${c.report_base}.html`);
         if (fs.existsSync(reportFile)) {
-          return `<a href="reports/${year}/${c.report_base}.html" class="wave-badge wave-badge-link">${w}</a>`;
+          reportLinks.push(
+            `<a href="reports/${year}/${c.report_base}.html" class="report-link">${year}</a>`
+          );
         }
       }
-      return `<span class="wave-badge">${w}</span>`;
-    }).join('');
-
-    let report = '';
-    if (c.report_base) {
       const compFile = path.join(reportsDir, 'comparison', `${c.report_base}_comparison.html`);
       if (fs.existsSync(compFile)) {
-        report = `<a href="reports/comparison/${c.report_base}_comparison.html" style="color: var(--accent);">Multi-year</a>`;
+        reportLinks.push(
+          `<a href="reports/comparison/${c.report_base}_comparison.html" class="report-link report-link-multi">Multi-year</a>`
+        );
       }
     }
+    const report = reportLinks.length
+      ? `<div class="report-links">${reportLinks.join('')}</div>`
+      : '<span class="report-none">—</span>';
 
     return `<tr data-category="${c.category || ''}">
       <td>${c.name}</td>
@@ -369,6 +380,68 @@ function buildPage(page) {
   fs.writeFileSync(path.join(SITE, `${page.id}.html`), template);
 }
 
+// --- Strip any existing site chrome from a report page ---------------------
+// Reports authored in ../params-ppbs ship with their own L6 topbar/footer
+// (baked in by Quarto via include-before/after-body); pages we built in a
+// previous run carry our injected `.l6-shell-*` chrome. We remove whichever is
+// present so a single canonical shell can be (re)injected — this keeps the
+// website repo the one source of truth and makes the build idempotent.
+
+// Remove every balanced <div class="...name..."> ... </div> block, counting
+// nested <div>s so inner wrappers (e.g. .l6-mark, .f-body) don't end it early.
+function stripDivBlock(html, name) {
+  const openTag = new RegExp(`<div[^>]*class="[^"]*\\b${name}\\b[^"]*"[^>]*>`);
+  let out = html;
+  let m;
+  while ((m = openTag.exec(out)) !== null) {
+    const start = m.index;
+    const tagRe = /<div\b[^>]*>|<\/div>/g;
+    tagRe.lastIndex = start + m[0].length;
+    let depth = 1;
+    let end = out.length;
+    let t;
+    while ((t = tagRe.exec(out)) !== null) {
+      depth += t[0][1] === '/' ? -1 : 1;
+      if (depth === 0) { end = tagRe.lastIndex; break; }
+    }
+    out = out.slice(0, start) + out.slice(end);
+  }
+  return out;
+}
+
+// Remove <style>/<script> blocks whose body contains a marker substring.
+function stripTagBlockByContent(html, tag, marker) {
+  const re = new RegExp(`<${tag}\\b[^>]*>[\\s\\S]*?</${tag}>`, 'g');
+  return html.replace(re, full => (full.includes(marker) ? '' : full));
+}
+
+function stripExistingShell(html) {
+  let h = html;
+  // Chrome containers — native Quarto (l6-*) and our prior injection (l6-shell-*).
+  h = stripDivBlock(h, 'l6-topbar');
+  h = stripDivBlock(h, 'l6-footer');
+  h = stripDivBlock(h, 'l6-shell-topbar');
+  h = stripDivBlock(h, 'l6-shell-footer');
+  // Inline styles: native l6-head block (defines .l6-topbar) and our shellStyle.
+  h = stripTagBlockByContent(h, 'style', '.l6-topbar');
+  h = stripTagBlockByContent(h, 'style', '.l6-shell-topbar');
+  // The repositioning script shipped in params' l6-footer.html.
+  h = stripTagBlockByContent(h, 'script', "querySelector('.l6-topbar')");
+  // Our injected stylesheet link and nav.js (re-added on injection).
+  h = h.replace(/[ \t]*<link[^>]*href="[^"]*css\/l6\.css"[^>]*>\n?/g, '');
+  h = h.replace(/[ \t]*<script[^>]*src="[^"]*js\/nav\.js"[^>]*>\s*<\/script>\n?/g, '');
+  // Orphaned comment markers left behind by the include files.
+  h = h.replace(/<!--\s*L6 Website Navigation\s*-->\n?/g, '');
+  h = h.replace(/<!--\s*L6 Website Footer\s*-->\n?/g, '');
+  h = h.replace(/<!--\s*L6 Swiss[^>]*-->\n?/g, '');
+  // Collapse the blank lines left at the injection anchors so a re-strip of an
+  // already-injected page reproduces the original — i.e. the build is idempotent.
+  h = h.replace(/(<body[^>]*>)\n+/g, '$1\n');
+  h = h.replace(/\n+(<\/body>)/g, '\n$1');
+  h = h.replace(/\n+(<\/head>)/g, '\n$1');
+  return h;
+}
+
 // --- Inject L6 shell into existing HTML pages (methods, reports) ---
 function injectShellIntoSubdir(subdir, activePage) {
   const dir = path.join(SITE, subdir);
@@ -408,8 +481,9 @@ function injectShellIntoSubdir(subdir, activePage) {
       const filePath = path.join(currentDir, entry.name);
       let html = read(filePath);
 
-      // Skip if already has L6 navigation (injected or native from Quarto)
-      if (html.includes('l6-shell-topbar') || html.includes('l6-topbar')) continue;
+      // Remove any existing chrome (native Quarto L6 or a prior injection) so
+      // the canonical shell below is the only header/footer that ships.
+      html = stripExistingShell(html);
 
       // Inject CSS into <head>
       html = html.replace('</head>', `${shellCss}${shellStyle}\n</head>`);
@@ -417,12 +491,19 @@ function injectShellIntoSubdir(subdir, activePage) {
       // Inject topbar after <body...>
       html = html.replace(/(<body[^>]*>)/, `$1\n<div class="l6-shell-topbar">${subdirTopbar}</div>`);
 
-      // Inject footer + JS before </body>
-      html = html.replace('</body>', `<div class="l6-shell-footer">${footer}</div>\n${shellJs}\n</body>`);
+      // Inject footer + JS before the FINAL </body>. Self-contained pages can
+      // embed </body> inside <script> string literals (e.g. leaflet's print
+      // plugin), so target the last occurrence, not the first.
+      const bodyClose = html.lastIndexOf('</body>');
+      if (bodyClose !== -1) {
+        html = html.slice(0, bodyClose)
+          + `<div class="l6-shell-footer">${footer}</div>\n${shellJs}\n`
+          + html.slice(bodyClose);
+      }
 
       const relPath = path.relative(path.join(SITE), filePath);
       fs.writeFileSync(filePath, html);
-      console.log(`  Injected L6 shell into ${relPath}`);
+      console.log(`  Normalized L6 shell in ${relPath}`);
     }
   }
 
