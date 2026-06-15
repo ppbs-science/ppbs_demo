@@ -427,7 +427,8 @@ function stripExistingShell(html) {
   h = stripTagBlockByContent(h, 'style', '.l6-shell-topbar');
   // The repositioning script shipped in params' l6-footer.html.
   h = stripTagBlockByContent(h, 'script', "querySelector('.l6-topbar')");
-  // Our injected stylesheet link and nav.js (re-added on injection).
+  // Our injected favicon, stylesheet link and nav.js (re-added on injection).
+  h = h.replace(/[ \t]*<link[^>]*href="[^"]*img\/favicon\.png"[^>]*>\n?/g, '');
   h = h.replace(/[ \t]*<link[^>]*href="[^"]*css\/l6\.css"[^>]*>\n?/g, '');
   h = h.replace(/[ \t]*<script[^>]*src="[^"]*js\/nav\.js"[^>]*>\s*<\/script>\n?/g, '');
   // Orphaned comment markers left behind by the include files.
@@ -459,7 +460,7 @@ function injectShellIntoSubdir(subdir, activePage) {
       );
     }
 
-    const shellCss = `<link rel="stylesheet" href="${relPrefix}css/l6.css">`;
+    const shellCss = `<link rel="icon" type="image/png" href="${relPrefix}img/favicon.png"><link rel="stylesheet" href="${relPrefix}css/l6.css">`;
     const shellJs = `<script src="${relPrefix}js/nav.js"></script>`;
     const shellStyle = `
 <style>
