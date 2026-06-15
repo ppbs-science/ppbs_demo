@@ -39,131 +39,36 @@ ul.task-list li input[type="checkbox"] {
 <script src="system_justification_2016_files/libs/quarto-contrib/glightbox/glightbox.min.js"></script>
 <link href="system_justification_2016_files/libs/quarto-contrib/glightbox/glightbox.min.css" rel="stylesheet">
 <link href="system_justification_2016_files/libs/quarto-contrib/glightbox/lightbox.css" rel="stylesheet">
-<!-- L6 Swiss Typographic Green — Topbar & Footer styles -->
-<style>
-@import url('https://fonts.googleapis.com/css2?family=Archivo:wght@400;600;700;800;900&display=swap');
 
-:root {
-  --l6-ink: #0a0a0a;
-  --l6-paper: #f2f0ec;
-  --l6-accent: #1a5e3a;
-  --l6-rule: #c8c4bc;
-}
-
-/* --- L6 Topbar --- */
-.l6-topbar {
-  display: grid;
-  grid-template-columns: 200px 1fr;
-  border-bottom: 2px solid var(--l6-ink);
-  position: relative;
-  z-index: 1100;
-  background: var(--l6-paper) !important;
-  font-family: 'Archivo', sans-serif;
-  -webkit-font-smoothing: antialiased;
-}
-.l6-topbar * { margin: 0; padding: 0; box-sizing: border-box; }
-.l6-topbar a { color: inherit !important; text-decoration: none !important; }
-.l6-topbar .l6-mark {
-  padding: 18px 24px;
-  font-weight: 900;
-  font-size: 15px;
-  letter-spacing: .15em;
-  text-transform: uppercase;
-  border-right: 2px solid var(--l6-ink);
-  display: flex;
-  align-items: center;
-  color: var(--l6-ink);
-}
-.l6-topbar .l6-mark em { font-style: normal !important; color: var(--l6-accent) !important; }
-.l6-topbar .l6-nav-toggle {
-  display: none;
-  background: none;
-  border: none;
-  font-size: 24px;
-  cursor: pointer;
-  padding: 18px 24px;
-  font-weight: 700;
-}
-.l6-topbar nav {
-  display: flex;
-  align-items: center;
-  gap: 0;
-  padding: 0;
-}
-.l6-topbar nav a {
-  padding: 18px 18px;
-  font-size: 11.5px;
-  text-transform: uppercase;
-  letter-spacing: .1em;
-  font-weight: 600;
-  border-right: 1px solid var(--l6-rule);
-  transition: background .15s;
-  white-space: nowrap;
-  color: var(--l6-ink);
-}
-.l6-topbar nav a:hover,
-.l6-topbar nav a.active {
-  background: var(--l6-ink) !important;
-  color: var(--l6-paper) !important;
-}
-
-/* --- L6 Footer --- */
-.l6-footer {
-  display: grid;
-  grid-template-columns: 200px 1fr;
-  border-top: 2px solid var(--l6-ink);
-  background: var(--l6-paper);
-  font-family: 'Archivo', sans-serif;
-  margin-top: 40px;
-}
-.l6-footer * { margin: 0; padding: 0; box-sizing: border-box; }
-.l6-footer a { color: inherit; text-decoration: none; }
-.l6-footer .l6-f-mark {
-  border-right: 2px solid var(--l6-ink);
-  padding: 28px 24px;
-  font-weight: 900;
-  font-size: 13px;
-  letter-spacing: .1em;
-  color: var(--l6-ink);
-}
-.l6-footer .l6-f-mark em { font-style: normal !important; color: var(--l6-accent) !important; }
-.l6-footer .l6-f-body {
-  padding: 28px 48px;
-  font-size: 12px;
-  color: #888;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-
-/* --- L6 Responsive — Tablet --- */
-@media (max-width: 960px) {
-  .l6-topbar { grid-template-columns: 1fr; }
-  .l6-topbar .l6-mark { border-right: 0; border-bottom: 2px solid var(--l6-ink); }
-  .l6-topbar nav { flex-wrap: wrap; }
-  .l6-footer { grid-template-columns: 1fr; }
-  .l6-footer .l6-f-mark { border-right: 0; border-bottom: 1px solid var(--l6-ink); }
-}
-
-/* --- L6 Responsive — Mobile --- */
-@media (max-width: 640px) {
-  .l6-topbar nav a { padding: 12px 12px; font-size: 10px; }
-  .l6-topbar .l6-mark { justify-content: space-between; }
-  .l6-topbar .l6-nav-toggle { display: block; }
-  .l6-topbar nav { display: none; }
-  .l6-topbar nav.l6-open { display: flex; }
-  .l6-footer .l6-f-body { flex-direction: column; gap: 4px; padding: 20px; }
-}
-</style>
 <script src="system_justification_2016_files/libs/kePrint-0.0.1/kePrint.js"></script>
 <link href="system_justification_2016_files/libs/lightable-0.0.1/lightable.css" rel="stylesheet">
 
 
 <link rel="stylesheet" href="assets/styles.css">
+<link rel="icon" type="image/png" href="../../img/favicon.png"><link rel="stylesheet" href="../../css/l6.css">
+<style>
+  .l6-shell-topbar { margin-bottom: 0; }
+  .l6-shell-footer { margin-top: 40px; }
+  body { background: var(--paper, #f2f0ec); }
+  .l6-shell-topbar .topbar .mark { background: transparent; color: inherit; }
+</style>
 </head>
 
 <body class="quarto-light">
-
+<div class="l6-shell-topbar"><div class="topbar">
+  <div class="mark"><a href="../../index.html">P<em>PB</em>S</a><button class="nav-toggle" aria-label="Toggle navigation">&#9776;</button></div>
+  <nav>
+    <a href="../../motivation.html" data-page="motivation">Motivation</a>
+    <a href="../../constructs.html" data-page="constructs">Constructs</a>
+    <a href="../../methodology.html" data-page="methodology">Methodology</a>
+    <a href="../../reports.html" data-page="reports" class="active">Reports</a>
+    <a href="../../publications.html" data-page="publications">Publications</a>
+    <a href="../../investigators.html" data-page="investigators">Investigators</a>
+    <a href="../../get-involved.html" data-page="get-involved">Get Involved / Access Data</a>
+    <a class="nav-github" href="https://github.com/ppbs-science/ppbs_demo" target="_blank" rel="noopener" title="View this project on GitHub" aria-label="View this project on GitHub"><svg viewBox="0 0 16 16" width="20" height="20" fill="currentColor" aria-hidden="true"><path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z"></path></svg></a>
+  </nav>
+</div>
+</div>
 <div id="quarto-content" class="page-columns page-rows-contents page-layout-article">
 <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
   <nav id="TOC" role="doc-toc" class="toc-active">
@@ -220,19 +125,7 @@ ul.task-list li input[type="checkbox"] {
 </nav>
 </div>
 <main class="content" id="quarto-document-content">
-<!-- L6 Website Navigation -->
-<div class="l6-topbar">
-  <div class="l6-mark"><a href="../../index.html">P<em>PB</em>S</a><button class="l6-nav-toggle" aria-label="Toggle navigation">☰</button></div>
-  <nav>
-    <a href="../../motivation.html">Motivation</a>
-    <a href="../../constructs.html">Constructs</a>
-    <a href="../../methodology.html">Methodology</a>
-    <a href="../../reports.html" class="active">Reports</a>
-    <a href="../../publications.html">Publications</a>
-    <a href="../../investigators.html">Investigators</a>
-    <a href="../../get-involved.html">Get Involved</a>
-  </nav>
-</div>
+
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
@@ -3170,39 +3063,8 @@ Table&nbsp;23: Elastic Net Summary
 
 </main>
 <!-- /main column -->
-<!-- L6 Website Footer -->
-<div class="l6-footer">
-  <div class="l6-f-mark">P<em>PB</em>S</div>
-  <div class="l6-f-body">
-    <span>Psychology of Political Behavior Studies</span>
-    <span>PI: Flavio Azevedo</span>
-  </div>
-</div>
-<script>
-// Move topbar and footer outside Quarto's grid layout so they span full width
-// without overlapping the TOC sidebar
-(function() {
-  var topbar = document.querySelector('.l6-topbar');
-  var footer = document.querySelector('.l6-footer');
-  var quartoContent = document.getElementById('quarto-content');
 
-  if (topbar && quartoContent) {
-    quartoContent.parentNode.insertBefore(topbar, quartoContent);
-  }
-  if (footer && quartoContent) {
-    quartoContent.parentNode.insertBefore(footer, quartoContent.nextSibling);
-  }
 
-  // Mobile nav toggle
-  var toggle = document.querySelector('.l6-nav-toggle');
-  if (toggle) {
-    toggle.addEventListener('click', function() {
-      var nav = document.querySelector('.l6-topbar nav');
-      if (nav) nav.classList.toggle('l6-open');
-    });
-  }
-})();
-</script>
 <script id="quarto-html-after-body" type="application/javascript">
   window.document.addEventListener("DOMContentLoaded", function (event) {
     const icon = "";
@@ -3636,8 +3498,13 @@ Table&nbsp;23: Elastic Net Summary
   
 })();
           </script>
-
-
-
-
+<div class="l6-shell-footer"><footer>
+  <div class="f-mark">P<em>PB</em>S</div>
+  <div class="f-body">
+    <span>Psychology of Political Behavior Studies</span>
+    <span>PI: Flavio Azevedo</span>
+  </div>
+</footer>
+</div>
+<script src="../../js/nav.js"></script>
 </body></html>
