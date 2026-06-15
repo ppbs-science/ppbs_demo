@@ -659,6 +659,43 @@ a.wave-badge-link:hover {
   border-color: var(--ink);
 }
 
+/* --- GitHub Jellycat floating icon --- */
+.gh-jellycat-container {
+  position: fixed;
+  bottom: 24px;
+  right: 24px;
+  z-index: 999;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  background: var(--accent);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  transition: all 0.3s ease;
+}
+
+.gh-jellycat-container:hover {
+  transform: scale(1.1);
+  box-shadow: 0 6px 20px rgba(26, 94, 58, 0.3);
+}
+
+.gh-jellycat-container a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+}
+
+.gh-jellycat {
+  width: 36px;
+  height: 36px;
+  color: var(--paper);
+  filter: drop-shadow(0 1px 2px rgba(0, 0, 0, 0.1));
+}
+
 /* =========================================
    Responsive — Tablet (~960px)
    ========================================= */
@@ -733,4 +770,16 @@ a.wave-badge-link:hover {
   .card-grid .card { border-right: 0; }
 
   .team-grid { grid-template-columns: repeat(2, 1fr); }
+
+  .gh-jellycat-container {
+    bottom: 16px;
+    right: 16px;
+    width: 52px;
+    height: 52px;
+  }
+  
+  .gh-jellycat {
+    width: 32px;
+    height: 32px;
+  }
 }
