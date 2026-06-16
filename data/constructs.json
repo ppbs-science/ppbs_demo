@@ -12,14 +12,14 @@
   {"name": "Justice Sensitivity — Perpetrator", "category": "Psychological Traits", "waves": ["2016", "2018-Pre", "2018-Post", "2020"], "report_base": "justice_sensitivity"},
   {"name": "Libertarianism", "category": "Values & Ideology", "waves": ["2016", "2018-Pre", "2018-Post", "2020"], "report_base": "libertarianism"},
   {"name": "Narcissism", "category": "Psychological Traits", "waves": ["2016", "2018-Pre", "2018-Post", "2020"], "report_base": "narcissism"},
-  {"name": "National Identification", "category": "Intergroup Relations", "waves": ["2016", "2018-Pre", "2018-Post"]},
-  {"name": "Nationalism", "category": "Intergroup Relations", "waves": ["2016", "2018-Pre", "2018-Post"]},
+  {"name": "National Identification", "category": "Intergroup Relations", "waves": ["2016", "2018-Pre", "2018-Post"], "report_base": "national_identity"},
+  {"name": "Nationalism", "category": "Intergroup Relations", "waves": ["2016", "2018-Pre", "2018-Post"], "report_base": "nationalism"},
   {"name": "Nativism", "category": "Intergroup Relations", "waves": ["2018-Pre", "2018-Post", "2020"]},
   {"name": "Needs — Epistemic", "category": "Psychological Traits", "waves": ["2016", "2018-Pre", "2018-Post", "2020"]},
   {"name": "Needs — Existential", "category": "Psychological Traits", "waves": ["2016", "2018-Pre", "2018-Post", "2020"]},
   {"name": "Needs — Relational", "category": "Psychological Traits", "waves": ["2016", "2018-Pre", "2018-Post", "2020"]},
-  {"name": "Patriotism — Blind", "category": "Intergroup Relations", "waves": ["2016", "2018-Pre", "2018-Post", "2020"]},
-  {"name": "Patriotism — Constructive", "category": "Intergroup Relations", "waves": ["2016", "2018-Pre", "2018-Post", "2020"]},
+  {"name": "Patriotism — Blind", "category": "Intergroup Relations", "waves": ["2016", "2018-Pre", "2018-Post", "2020"], "report_base": "patriotism"},
+  {"name": "Patriotism — Constructive", "category": "Intergroup Relations", "waves": ["2016", "2018-Pre", "2018-Post", "2020"], "report_base": "patriotism"},
   {"name": "Political Ideology — Operational", "category": "Values & Ideology", "waves": ["2016", "2018-Pre", "2018-Post", "2020"]},
   {"name": "Political Ideology — Symbolic", "category": "Values & Ideology", "waves": ["2016", "2018-Pre", "2018-Post", "2020"]},
   {"name": "Political Sophistication", "category": "Political Behavior", "waves": ["2016", "2018-Pre", "2018-Post", "2020"]},
@@ -50,5 +50,8 @@
   {"name": "Gender Equality", "category": "Intergroup Relations", "waves": ["2018-Pre", "2018-Post", "2020"], "report_base": "gender_equality"},
   {"name": "Gun Control", "category": "Beliefs & Cognition", "waves": ["2018-Pre", "2018-Post", "2020"], "report_base": "gun_control_attitudes"},
   {"name": "Religiosity", "category": "Beliefs & Cognition", "waves": ["2016", "2018-Pre", "2018-Post", "2020"], "report_base": "religiosity"},
-  {"name": "Science Skepticism", "category": "Beliefs & Cognition", "waves": ["2018-Pre", "2018-Post", "2020"], "report_base": "science_skepticism"}
+  {"name": "Science Skepticism", "category": "Beliefs & Cognition", "waves": ["2018-Pre", "2018-Post", "2020"], "report_base": "science_skepticism"},
+  {"name": "Antiscientific Attitudes", "category": "Beliefs & Cognition", "waves": ["2016"], "report_base": "antiscientific_attitudes"},
+  {"name": "Climate Conspiracy", "category": "Beliefs & Cognition", "waves": ["2016"], "report_base": "climate_conspiracy"},
+  {"name": "Climate Facts", "category": "Beliefs & Cognition", "waves": ["2016"], "report_base": "climate_facts"}
 ]
