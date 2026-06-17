@@ -479,6 +479,22 @@ footer .f-body {
   margin-bottom: 16px;
   border: 2px solid var(--rule);
 }
+.team-grid .team-member .avatar-placeholder {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  margin: 0 auto 16px;
+  border: 2px solid var(--rule);
+  background: var(--accent);
+  color: var(--paper);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 38px;
+  font-weight: 800;
+  letter-spacing: .03em;
+  user-select: none;
+}
 .team-grid .team-member h3 {
   font-size: 14px;
   font-weight: 800;
